@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>الاحتمالات - الأقسام النهائية</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="side-nav" aria-label="التنقل الرئيسي">
+      <div class="brand">
+        <span>Pr</span>
+        <div>
+          <strong>الاحتمالات</strong>
+          <small>نهائي علمي وأدبي</small>
+        </div>
+      </div>
+      <button class="nav-btn active" type="button" data-view="home">الرئيسية</button>
+      <button class="nav-btn" type="button" data-view="learn">التعلم</button>
+      <button class="nav-btn" type="button" data-view="practice">التمارين</button>
+      <button class="nav-btn" type="button" data-view="bac">بكالوريا</button>
+      <button class="nav-btn" type="button" data-view="progress">تقدمي</button>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <span class="kicker">السنة الثالثة ثانوي</span>
+          <h1>باب الاحتمالات</h1>
+        </div>
+        <div class="branch-switch" role="group" aria-label="اختيار الشعبة">
+          <button class="active" type="button" data-branch="science">علمي</button>
+          <button type="button" data-branch="literary">أدبي</button>
+        </div>
+      </header>
+
+      <section class="view active" id="homeView">
+        <section class="hero">
+          <div>
+            <span class="kicker">ماذا تدرس الآن؟</span>
+            <h2 id="homeTitle">مسار الاحتمالات للشعب العلمية</h2>
+            <p id="homeSummary">انطلق من العد والتنظيم، ثم الاحتمال الشرطي، الاستقلال، والقانون الثنائي حسب شعبة الدراسة.</p>
+          </div>
+          <div class="progress-ring" id="progressRing"><strong id="progressValue">0%</strong><span>إنجاز</span></div>
+        </section>
+
+        <section class="dashboard">
+          <article class="panel next-panel">
+            <div>
+              <span class="label">الفعل التالي</span>
+              <h3 id="nextTitle">ابدأ بأول محور</h3>
+              <p id="nextSummary">سيظهر هنا المحور المقترح حسب تقدمك.</p>
+            </div>
+            <button class="primary-btn" type="button" id="continueBtn">ابدأ الآن</button>
+          </article>
+          <article class="panel stat-card"><span>المحاور</span><strong id="moduleCount">0</strong></article>
+          <article class="panel stat-card"><span>التمارين</span><strong id="exerciseCount">0</strong></article>
+          <article class="panel stat-card"><span>النشاطات</span><strong id="activityCount">0</strong></article>
+        </section>
+      </section>
+
+      <section class="view" id="learnView">
+        <div class="section-title">
+          <h2>محاور التعلم</h2>
+          <span id="learnSubtitle">حسب الشعبة المختارة</span>
+        </div>
+        <section class="cards-grid" id="modulesGrid"></section>
+      </section>
+
+      <section class="view" id="moduleView">
+        <button class="ghost-btn back-btn" type="button" data-view-jump="learn">رجوع إلى المحاور</button>
+        <section id="moduleDetail"></section>
+      </section>
+
+      <section class="view" id="practiceView">
+        <div class="section-title">
+          <h2>تمارين مركزة</h2>
+          <span>تتغير حسب الشعبة</span>
+        </div>
+        <section class="cards-grid" id="practiceGrid"></section>
+      </section>
+
+      <section class="view" id="bacView">
+        <div class="section-title">
+          <h2>تحضير البكالوريا</h2>
+          <span>نماذج أسئلة حسب النمط</span>
+        </div>
+        <section class="bac-layout" id="bacGrid"></section>
+      </section>
+
+      <section class="view" id="progressView">
+        <div class="section-title">
+          <h2>تقدمي</h2>
+          <span id="progressSummary">0 محور مكتمل</span>
+        </div>
+        <section class="cards-grid" id="progressGrid"></section>
+        <button class="danger-btn" type="button" id="resetBtn">تصفير التقدم</button>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

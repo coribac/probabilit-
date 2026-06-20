@@ -28,7 +28,7 @@ const bacTrackLabels = {
 
 const bacTracksByBranch = {
   science: ["experimental", "math", "technical", "management"],
-  literary: [],
+  literary: ["management"],
 };
 
 function bacTracksForBranch(branch = state.branch) {
@@ -678,9 +678,9 @@ const modules = [
     ],
     exercises: [
       {
-        title: "شجرة بسيطة",
-        statement: "صندوق فيه 4 حمراء و6 زرقاء. نسحب كرتين دون إرجاع. احسب احتمال كرتين حمراوين.",
-        solution: "احتمال الكرة الأولى حمراء هو 4/10. بعد سحب كرة حمراء دون إرجاع، يبقى 3 حمراء من أصل 9 كرات. إذن احتمال الكرة الثانية حمراء هو 3/9.<br>P=4/10×3/9=12/90=2/15."
+        title: "قراءة شجرة احتمالات",
+        statement: "في دراسة حول مطالعة الكتب، 60% من التلاميذ يفضلون الروايات، ومن بين مفضلي الروايات 40% يقرؤون أسبوعيًا. احسب احتمال اختيار تلميذ يفضل الروايات ويقرأ أسبوعيًا.",
+        solution: "نرمز بـ R لحدث تفضيل الروايات وبـ W لحدث القراءة أسبوعيًا. لدينا P(R)=0.60 و P(W/R)=0.40. إذن P(R∩W)=P(R)×P(W/R)=0.60×0.40=0.24."
       },
     ],
   },
@@ -6343,6 +6343,25 @@ function renderExerciseCard(exercise, key) {
 }
 
 function renderPractice() {
+  if (state.branch === "literary") {
+    const exercises = moduleExercises();
+    document.getElementById("practiceGrid").innerHTML = exercises.length ? exercises.map((exercise, index) => {
+      const isOpen = state.openSolutions[exercise.key];
+      return `
+        <article class="exercise-card">
+          <span class="label">تمرين ${index + 1}</span>
+          <h3>${exercise.title}</h3>
+          <p>${exercise.statement}</p>
+          <button class="solution-toggle" type="button" data-solution="${exercise.key}">${isOpen ? "إخفاء الحل" : "إظهار الحل"}</button>
+          <div class="solution-panel ${isOpen ? "open" : ""}" id="solution-${exercise.key}">
+            <p>${exercise.solution}</p>
+          </div>
+        </article>
+      `;
+    }).join("") : `<div class="bac-empty">لا توجد تمارين أدبية مضافة حاليًا.</div>`;
+    enhanceMath(document.getElementById("practiceGrid"));
+    return;
+  }
   const firstKey = "practice-main-1";
   const firstOpen = state.openSolutions[firstKey];
   const secondKey = "practice-main-2";
@@ -7422,11 +7441,13 @@ function renderBac() {
     ? branchExercises
     : branchExercises.filter((ex) => ex.track === state.bacTrackFilter);
   const visibleTrackLabels = [
-    ["all", "كل الشعب"],
+    ["all", state.branch === "literary" ? "كل مواضيع الأدبي" : "كل الشعب العلمية"],
     ...allowedTracks.map((track) => [track, bacTrackLabels[track]]),
   ];
-  const bacIntroTitle = "بكالوريا جزائرية";
-  const bacIntroText = "مواضيع وتمارين حسب الشعب"; 
+  const bacIntroTitle = state.branch === "literary" ? "بكالوريا الشعب الأدبية" : "بكالوريا الشعب العلمية";
+  const bacIntroText = state.branch === "literary"
+    ? "مسار أدبي يركز على مواضيع التسيير والاقتصاد."
+    : "مواضيع العلوم التجريبية والرياضيات والتقني الرياضي إضافة إلى التسيير والاقتصاد."; 
   const years = ["الكل", ...new Set(trackFiltered.map((ex) => ex.year))].sort((a, b) => {
     if (a === "الكل") return -1;
     if (b === "الكل") return 1;

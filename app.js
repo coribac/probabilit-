@@ -4205,6 +4205,810 @@ P(T̄)=1-P(T)
 =19/40
 
 <p class="property-box"><strong>النتيجة:</strong> احتمال ألا يمارس التلميذ المختار كرة القدم هو 19/40.</p>`
+  },
+  {
+    id: 35,
+    track: "management",
+    year: 2012,
+    topic: "الموضوع الثاني",
+    text: `التمرين الأول: (04 نقاط)
+
+بينت دراسة إحصائية لتلاميذ السنة الثالثة ثانوي بإحدى الثانويات أن 30% من التلاميذ قدموا من الإكمالية A، و45% قدموا من الإكمالية B، والبقية قدموا من الإكمالية C.
+
+في السنة الأولى نجح 25% من التلاميذ القادمين من الإكمالية A، و18% من الذين قدموا من الإكمالية B، و84% من الذين قدموا من الإكمالية C.
+
+نختار تلميذا من تلاميذ السنة الثالثة ثانوي بطريقة عشوائية، وبعد اجتيازه امتحان البكالوريا نرمز إلى:
+R: "التلميذ المختار نجح في الامتحان"
+A: "التلميذ المختار قادم من الإكمالية A"
+B: "التلميذ المختار قادم من الإكمالية B"
+C: "التلميذ المختار قادم من الإكمالية C"
+
+1) أنجز شجرة الاحتمالات التي تمثل هذه الوضعية.
+2) احسب P(C∩R) ثم تحقق أن P(C∩R)=0.21.
+3) احسب احتمال P(R).
+4) احسب الاحتمال الشرطي P_R(B).`,
+    solution: `<div class="definition-box"><strong>المعطيات:</strong> P(A)=0.30، P(B)=0.45، P(C)=0.25. كما أن P(R/A)=0.25، P(R/B)=0.18، P(R/C)=0.84.</div>
+
+1) شجرة الاحتمالات:
+
+<svg class="bac-tree" viewBox="0 0 680 430" role="img" aria-label="شجرة احتمالات بكالوريا 2012 تسيير واقتصاد الموضوع الثاني">
+  <defs>
+    <marker id="bacTreeArrow2012ManagementTopic2" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z"></path>
+    </marker>
+  </defs>
+  <line x1="45" y1="215" x2="205" y2="85" marker-end="url(#bacTreeArrow2012ManagementTopic2)"></line>
+  <line x1="45" y1="215" x2="205" y2="215" marker-end="url(#bacTreeArrow2012ManagementTopic2)"></line>
+  <line x1="45" y1="215" x2="205" y2="345" marker-end="url(#bacTreeArrow2012ManagementTopic2)"></line>
+  <line x1="230" y1="85" x2="445" y2="55" marker-end="url(#bacTreeArrow2012ManagementTopic2)"></line>
+  <line x1="230" y1="85" x2="445" y2="115" marker-end="url(#bacTreeArrow2012ManagementTopic2)"></line>
+  <line x1="230" y1="215" x2="445" y2="185" marker-end="url(#bacTreeArrow2012ManagementTopic2)"></line>
+  <line x1="230" y1="215" x2="445" y2="245" marker-end="url(#bacTreeArrow2012ManagementTopic2)"></line>
+  <line x1="230" y1="345" x2="445" y2="315" marker-end="url(#bacTreeArrow2012ManagementTopic2)"></line>
+  <line x1="230" y1="345" x2="445" y2="375" marker-end="url(#bacTreeArrow2012ManagementTopic2)"></line>
+  <text x="110" y="118">0.30</text>
+  <text x="110" y="205">0.45</text>
+  <text x="110" y="328">0.25</text>
+  <text x="315" y="58">0.25</text>
+  <text x="315" y="122">0.75</text>
+  <text x="315" y="188">0.18</text>
+  <text x="315" y="252">0.82</text>
+  <text x="315" y="318">0.84</text>
+  <text x="315" y="382">0.16</text>
+  <text x="218" y="78">A</text>
+  <text x="218" y="228">B</text>
+  <text x="218" y="358">C</text>
+  <text x="462" y="59">R</text>
+  <text x="462" y="119">R̄</text>
+  <text x="462" y="189">R</text>
+  <text x="462" y="249">R̄</text>
+  <text x="462" y="319">R</text>
+  <text x="462" y="379">R̄</text>
+</svg>
+
+2) حساب P(C∩R):
+
+P(C∩R)=P(C)×P(R/C)
+=0.25×0.84
+=0.21
+
+<p class="property-box"><strong>تأكيد:</strong> P(C∩R)=0.21.</p>
+
+3) حساب P(R):
+
+P(R)=P(A∩R)+P(B∩R)+P(C∩R)
+=P(A)P(R/A)+P(B)P(R/B)+P(C)P(R/C)
+=0.30×0.25 + 0.45×0.18 + 0.25×0.84
+=0.075+0.081+0.21
+=0.366
+
+<p class="property-box"><strong>النتيجة:</strong> P(R)=0.366.</p>
+
+4) حساب الاحتمال الشرطي P_R(B):
+
+P_R(B)=P(B/R)=P(B∩R)/P(R)
+
+P(B∩R)=P(B)×P(R/B)
+=0.45×0.18
+=0.081
+
+إذن:
+P_R(B)=0.081/0.366
+=81/366
+=27/122
+≈0.221
+
+<p class="property-box"><strong>النتيجة:</strong> P_R(B)=27/122≈0.221.</p>`
+  },
+  {
+    id: 36,
+    track: "management",
+    year: 2013,
+    topic: "الموضوع الأول",
+    text: `التمرين الأول: (04 نقاط)
+
+في رف من رفوف مكتبة "ثانوية النجاح"، يوجد 150 كتاب رياضيات و50 كتاب فلسفة، حيث 40% من كتب الرياضيات و70% من كتب الفلسفة تخص شعبة التسيير والاقتصاد.
+
+نختار عشوائيا من الرف كتابا واحدا.
+
+عين، مع التبرير، الجواب الصحيح الوحيد من بين الأجوبة المقترحة، في كل حالة من الحالات التالية:
+
+1) احتمال أن يكون الكتاب المختار كتاب رياضيات هو:
+أ) 3/4      ب) 2/5      ج) 1/150
+
+2) احتمال أن يكون الكتاب المختار خاصا بشعبة التسيير والاقتصاد هو:
+أ) 0.24      ب) 0.475      ج) 0.21
+
+3) احتمال أن يكون الكتاب المختار كتاب رياضيات خاصا بشعبة التسيير والاقتصاد هو:
+أ) 0.15      ب) 0.4      ج) 0.3
+
+4) إذا كان الكتاب المختار يخص شعبة التسيير والاقتصاد، فإن احتمال أن يكون كتاب رياضيات هو:
+أ) 2/75      ب) 12/19      ج) 3/10`,
+    solution: `<div class="definition-box"><strong>المعطيات:</strong> عدد الكتب الكلي هو 150+50=200. كتب الرياضيات 150 وكتب الفلسفة 50. من كتب الرياضيات: 40% تخص التسيير والاقتصاد، أي 0.40×150=60 كتابا. ومن كتب الفلسفة: 70% تخص التسيير والاقتصاد، أي 0.70×50=35 كتابا.</div>
+
+إذن عدد الكتب الخاصة بشعبة التسيير والاقتصاد هو:
+60+35=95
+
+1) احتمال أن يكون الكتاب المختار كتاب رياضيات:
+
+P(رياضيات)=150/200=3/4
+
+<p class="property-box"><strong>الإجابة الصحيحة:</strong> أ) 3/4.</p>
+
+2) احتمال أن يكون الكتاب المختار خاصا بشعبة التسيير والاقتصاد:
+
+P(تسيير واقتصاد)=95/200=0.475
+
+<p class="property-box"><strong>الإجابة الصحيحة:</strong> ب) 0.475.</p>
+
+3) احتمال أن يكون الكتاب المختار كتاب رياضيات خاصا بشعبة التسيير والاقتصاد:
+عدد كتب الرياضيات الخاصة بالتسيير والاقتصاد هو 60.
+
+P=60/200=0.3
+
+<p class="property-box"><strong>الإجابة الصحيحة:</strong> ج) 0.3.</p>
+
+4) إذا كان الكتاب المختار يخص شعبة التسيير والاقتصاد، فإن احتمال أن يكون كتاب رياضيات هو:
+
+P(رياضيات / تسيير واقتصاد)=60/95=12/19
+
+<p class="property-box"><strong>الإجابة الصحيحة:</strong> ب) 12/19.</p>`
+  },
+  {
+    id: 37,
+    track: "management",
+    year: 2013,
+    topic: "الموضوع الثاني",
+    text: `التمرين الأول: (04 نقاط)
+
+وضعت أسئلة امتحان شفوي في علبتين متماثلتين A وB. العلبة A تحتوي على 4 أسئلة في الثقافة العامة و6 أسئلة في مادة الاختصاص، والعلبة B تحتوي على 3 أسئلة في الثقافة العامة و7 أسئلة في مادة الاختصاص. عمليتا سحب الأسئلة واختيار إحدى العلبتين متساوية الاحتمال.
+
+1) يختار مترشح إحدى العلبتين ليسحب منها عشوائيا سؤالا واحدا.
+أ) شكل شجرة الاحتمالات المتوازنة.
+ب) ما هو احتمال سحب المترشح لسؤال في مادة الاختصاص من العلبة A؟
+ج) ما هو احتمال سحب المترشح لسؤال في مادة الاختصاص من العلبة B؟
+د) ما هو احتمال سحب المترشح لسؤال في مادة الاختصاص؟
+هـ) علما أن المترشح سحب سؤالا في الثقافة العامة، ما احتمال أن يكون من العلبة B؟
+
+2) مترشح آخر يسحب عشوائيا سؤالا واحدا من العلبة A وسؤالا واحدا من العلبة B. بين أن احتمال سحب سؤالين في مادة الاختصاص هو 0.42.`,
+    diagram: `
+      <svg class="bac-tree" viewBox="0 0 650 330" role="img" aria-label="شجرة احتمالات ناقصة لبكالوريا 2013 تسيير واقتصاد الموضوع الثاني">
+        <defs>
+          <marker id="bacTreeArrow2013ManagementTopic2" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+            <path d="M0,0 L8,4 L0,8 Z"></path>
+          </marker>
+        </defs>
+        <line x1="45" y1="165" x2="215" y2="90" marker-end="url(#bacTreeArrow2013ManagementTopic2)"></line>
+        <line x1="45" y1="165" x2="215" y2="240" marker-end="url(#bacTreeArrow2013ManagementTopic2)"></line>
+        <line x1="240" y1="90" x2="445" y2="55" marker-end="url(#bacTreeArrow2013ManagementTopic2)"></line>
+        <line x1="240" y1="90" x2="445" y2="125" marker-end="url(#bacTreeArrow2013ManagementTopic2)"></line>
+        <line x1="240" y1="240" x2="445" y2="205" marker-end="url(#bacTreeArrow2013ManagementTopic2)"></line>
+        <line x1="240" y1="240" x2="445" y2="275" marker-end="url(#bacTreeArrow2013ManagementTopic2)"></line>
+        <text x="118" y="103">1/2</text>
+        <text x="118" y="235">1/2</text>
+        <text x="320" y="58">----</text>
+        <text x="320" y="130">----</text>
+        <text x="320" y="208">----</text>
+        <text x="320" y="280">----</text>
+        <text x="228" y="84">A</text>
+        <text x="228" y="255">B</text>
+        <text x="462" y="59">G</text>
+        <text x="462" y="129">S</text>
+        <text x="462" y="209">G</text>
+        <text x="462" y="279">S</text>
+      </svg>
+    `,
+    solution: `<div class="definition-box"><strong>الرموز:</strong> نرمز بـ G إلى "سؤال في الثقافة العامة"، وبـ S إلى "سؤال في مادة الاختصاص". اختيار العلبة A أو B متساوي الاحتمال، إذن P(A)=P(B)=1/2.</div>
+
+1) أ) شجرة الاحتمالات المتوازنة:
+
+<svg class="bac-tree" viewBox="0 0 650 330" role="img" aria-label="الشجرة المكتملة لبكالوريا 2013 تسيير واقتصاد الموضوع الثاني">
+  <defs>
+    <marker id="bacTreeArrow2013ManagementTopic2Solved" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z"></path>
+    </marker>
+  </defs>
+  <line x1="45" y1="165" x2="215" y2="90" marker-end="url(#bacTreeArrow2013ManagementTopic2Solved)"></line>
+  <line x1="45" y1="165" x2="215" y2="240" marker-end="url(#bacTreeArrow2013ManagementTopic2Solved)"></line>
+  <line x1="240" y1="90" x2="445" y2="55" marker-end="url(#bacTreeArrow2013ManagementTopic2Solved)"></line>
+  <line x1="240" y1="90" x2="445" y2="125" marker-end="url(#bacTreeArrow2013ManagementTopic2Solved)"></line>
+  <line x1="240" y1="240" x2="445" y2="205" marker-end="url(#bacTreeArrow2013ManagementTopic2Solved)"></line>
+  <line x1="240" y1="240" x2="445" y2="275" marker-end="url(#bacTreeArrow2013ManagementTopic2Solved)"></line>
+  <text x="118" y="103">1/2</text>
+  <text x="118" y="235">1/2</text>
+  <text x="320" y="58">4/10</text>
+  <text x="320" y="130">6/10</text>
+  <text x="320" y="208">3/10</text>
+  <text x="320" y="280">7/10</text>
+  <text x="228" y="84">A</text>
+  <text x="228" y="255">B</text>
+  <text x="462" y="59">G</text>
+  <text x="462" y="129">S</text>
+  <text x="462" y="209">G</text>
+  <text x="462" y="279">S</text>
+</svg>
+
+ب) احتمال سحب سؤال في مادة الاختصاص من العلبة A:
+
+P(A∩S)=P(A)×P(S/A)
+=1/2×6/10
+=3/10
+=0.3
+
+<p class="property-box"><strong>النتيجة:</strong> P(A∩S)=0.3.</p>
+
+ج) احتمال سحب سؤال في مادة الاختصاص من العلبة B:
+
+P(B∩S)=P(B)×P(S/B)
+=1/2×7/10
+=7/20
+=0.35
+
+<p class="property-box"><strong>النتيجة:</strong> P(B∩S)=0.35.</p>
+
+د) احتمال سحب سؤال في مادة الاختصاص:
+
+P(S)=P(A∩S)+P(B∩S)
+=0.3+0.35
+=0.65
+
+<p class="property-box"><strong>النتيجة:</strong> P(S)=0.65.</p>
+
+هـ) علما أن المترشح سحب سؤالا في الثقافة العامة، احتمال أن يكون من العلبة B:
+
+P(G)=P(A∩G)+P(B∩G)
+=1/2×4/10 + 1/2×3/10
+=2/10+3/20
+=7/20
+
+P(B/G)=P(B∩G)/P(G)
+=(1/2×3/10)/(7/20)
+=(3/20)/(7/20)
+=3/7
+
+<p class="property-box"><strong>النتيجة:</strong> P(B/G)=3/7.</p>
+
+2) يسحب مترشح سؤالا من A وسؤالا من B:
+احتمال أن يكون السؤالان في مادة الاختصاص هو:
+
+P(S من A و S من B)=P(S/A)×P(S/B)
+=6/10×7/10
+=42/100
+=0.42
+
+<p class="property-box"><strong>تبيان:</strong> احتمال سحب سؤالين في مادة الاختصاص هو 0.42.</p>`
+  },
+  {
+    id: 38,
+    track: "management",
+    year: 2014,
+    topic: "الموضوع الأول",
+    text: `التمرين الأول: (04 نقاط)
+
+ثلاثة أكياس متماثلة U1 وU2 وU3، كل منها يحوي 6 كريات متماثلة.
+الكيس U1 يحوي كريتين بيضاوين وأربع كريات حمراء.
+الكيس U2 يحوي ثلاث كريات بيضاء وثلاث كريات حمراء.
+الكيس U3 يحوي خمس كريات بيضاء وكرية حمراء.
+
+نختار عشوائيا كيسا ثم نسحب منه دون اختيار كرية واحدة.
+
+1) شكل شجرة الاحتمالات المتوازنة التي تنمذج هذه الوضعية.
+2) ما احتمال سحب كرية بيضاء من الكيس U3؟
+3) ما احتمال سحب كرية بيضاء؟
+4) علما أن الكرية المسحوبة بيضاء، ما احتمال أن تكون من الكيس U3؟`,
+    diagram: `
+      <svg class="bac-tree" viewBox="0 0 690 430" role="img" aria-label="شجرة احتمالات ناقصة لبكالوريا 2014 تسيير واقتصاد الموضوع الأول">
+        <defs>
+          <marker id="bacTreeArrow2014ManagementTopic1" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+            <path d="M0,0 L8,4 L0,8 Z"></path>
+          </marker>
+        </defs>
+        <line x1="45" y1="215" x2="205" y2="85" marker-end="url(#bacTreeArrow2014ManagementTopic1)"></line>
+        <line x1="45" y1="215" x2="205" y2="215" marker-end="url(#bacTreeArrow2014ManagementTopic1)"></line>
+        <line x1="45" y1="215" x2="205" y2="345" marker-end="url(#bacTreeArrow2014ManagementTopic1)"></line>
+        <line x1="235" y1="85" x2="455" y2="55" marker-end="url(#bacTreeArrow2014ManagementTopic1)"></line>
+        <line x1="235" y1="85" x2="455" y2="115" marker-end="url(#bacTreeArrow2014ManagementTopic1)"></line>
+        <line x1="235" y1="215" x2="455" y2="185" marker-end="url(#bacTreeArrow2014ManagementTopic1)"></line>
+        <line x1="235" y1="215" x2="455" y2="245" marker-end="url(#bacTreeArrow2014ManagementTopic1)"></line>
+        <line x1="235" y1="345" x2="455" y2="315" marker-end="url(#bacTreeArrow2014ManagementTopic1)"></line>
+        <line x1="235" y1="345" x2="455" y2="375" marker-end="url(#bacTreeArrow2014ManagementTopic1)"></line>
+        <text x="112" y="118">1/3</text>
+        <text x="112" y="205">1/3</text>
+        <text x="112" y="328">1/3</text>
+        <text x="318" y="58">----</text>
+        <text x="318" y="122">----</text>
+        <text x="318" y="188">----</text>
+        <text x="318" y="252">----</text>
+        <text x="318" y="318">----</text>
+        <text x="318" y="382">----</text>
+        <text x="218" y="78">U1</text>
+        <text x="218" y="228">U2</text>
+        <text x="218" y="358">U3</text>
+        <text x="472" y="59">B</text>
+        <text x="472" y="119">R</text>
+        <text x="472" y="189">B</text>
+        <text x="472" y="249">R</text>
+        <text x="472" y="319">B</text>
+        <text x="472" y="379">R</text>
+      </svg>
+    `,
+    solution: `<div class="definition-box"><strong>المعطيات:</strong> نختار أحد الأكياس الثلاثة باحتمال 1/3 لكل كيس. نرمز بـ B إلى "كرية بيضاء" وR إلى "كرية حمراء".</div>
+
+1) شجرة الاحتمالات المتوازنة:
+
+<svg class="bac-tree" viewBox="0 0 690 430" role="img" aria-label="الشجرة المكتملة لبكالوريا 2014 تسيير واقتصاد الموضوع الأول">
+  <defs>
+    <marker id="bacTreeArrow2014ManagementTopic1Solved" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z"></path>
+    </marker>
+  </defs>
+  <line x1="45" y1="215" x2="205" y2="85" marker-end="url(#bacTreeArrow2014ManagementTopic1Solved)"></line>
+  <line x1="45" y1="215" x2="205" y2="215" marker-end="url(#bacTreeArrow2014ManagementTopic1Solved)"></line>
+  <line x1="45" y1="215" x2="205" y2="345" marker-end="url(#bacTreeArrow2014ManagementTopic1Solved)"></line>
+  <line x1="235" y1="85" x2="455" y2="55" marker-end="url(#bacTreeArrow2014ManagementTopic1Solved)"></line>
+  <line x1="235" y1="85" x2="455" y2="115" marker-end="url(#bacTreeArrow2014ManagementTopic1Solved)"></line>
+  <line x1="235" y1="215" x2="455" y2="185" marker-end="url(#bacTreeArrow2014ManagementTopic1Solved)"></line>
+  <line x1="235" y1="215" x2="455" y2="245" marker-end="url(#bacTreeArrow2014ManagementTopic1Solved)"></line>
+  <line x1="235" y1="345" x2="455" y2="315" marker-end="url(#bacTreeArrow2014ManagementTopic1Solved)"></line>
+  <line x1="235" y1="345" x2="455" y2="375" marker-end="url(#bacTreeArrow2014ManagementTopic1Solved)"></line>
+  <text x="112" y="118">1/3</text>
+  <text x="112" y="205">1/3</text>
+  <text x="112" y="328">1/3</text>
+  <text x="318" y="58">2/6</text>
+  <text x="318" y="122">4/6</text>
+  <text x="318" y="188">3/6</text>
+  <text x="318" y="252">3/6</text>
+  <text x="318" y="318">5/6</text>
+  <text x="318" y="382">1/6</text>
+  <text x="218" y="78">U1</text>
+  <text x="218" y="228">U2</text>
+  <text x="218" y="358">U3</text>
+  <text x="472" y="59">B</text>
+  <text x="472" y="119">R</text>
+  <text x="472" y="189">B</text>
+  <text x="472" y="249">R</text>
+  <text x="472" y="319">B</text>
+  <text x="472" y="379">R</text>
+</svg>
+
+2) احتمال سحب كرية بيضاء من الكيس U3:
+
+P(U3∩B)=P(U3)×P(B/U3)
+=1/3×5/6
+=5/18
+
+<p class="property-box"><strong>النتيجة:</strong> P(U3∩B)=5/18.</p>
+
+3) احتمال سحب كرية بيضاء:
+
+P(B)=P(U1∩B)+P(U2∩B)+P(U3∩B)
+=1/3×2/6 + 1/3×3/6 + 1/3×5/6
+=2/18+3/18+5/18
+=10/18=5/9
+
+<p class="property-box"><strong>النتيجة:</strong> P(B)=5/9.</p>
+
+4) علما أن الكرية المسحوبة بيضاء، احتمال أن تكون من الكيس U3:
+
+P(U3/B)=P(U3∩B)/P(B)
+=(5/18)/(5/9)
+=5/18×9/5
+=1/2
+
+<p class="property-box"><strong>النتيجة:</strong> P(U3/B)=1/2.</p>`
+  },
+  {
+    id: 39,
+    track: "management",
+    year: 2014,
+    topic: "الموضوع الثاني",
+    text: `التمرين الأول: (04 نقاط)
+
+عين مع التبرير الجواب الصحيح الوحيد من بين الأجوبة الثلاثة المقترحة في كل حالة من الحالات الآتية:
+
+I) أعضاء الطاقم الصحي لمؤسسة استشفائية موزعون حسب الجدول المقابل. نختار عشوائيا عضوا من هذا الطاقم.
+
+1) احتمال أن يكون العضو المختار أنثى هو:
+أ) 1/23      ب) 23/60      ج) 8/23
+
+2) احتمال أن يكون العضو المختار أنثى علما أنها طبيبة هو:
+أ) 2/5      ب) 2/15      ج) 8/23
+
+II) الجدول المقابل يعرف قانون احتمال تجربة عشوائية.
+
+1) تباين قانون الاحتمال هو:
+أ) 1.12      ب) 2.5      ج) 1.25
+
+2) إذا كانت A وB حادثتين مستقلتين، حيث P(A)=0.4 وP(B)=0.3، فإن P(A∩B) هو:
+أ) 0.12      ب) 0.7      ج) 0.75`,
+    diagram: `
+      <table class="bac-data-table" aria-label="توزيع أعضاء الطاقم الصحي حسب الجنس والوظيفة">
+        <thead>
+          <tr>
+            <th></th>
+            <th>ممرضون</th>
+            <th>أطباء</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>ذكور</th>
+            <td>25</td>
+            <td>12</td>
+          </tr>
+          <tr>
+            <th>إناث</th>
+            <td>15</td>
+            <td>8</td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="bac-data-table" aria-label="قانون احتمال تجربة عشوائية">
+        <thead>
+          <tr>
+            <th>xᵢ</th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>pᵢ</th>
+            <td>0.2</td>
+            <td>0.4</td>
+            <td>0.1</td>
+            <td>0.3</td>
+          </tr>
+        </tbody>
+      </table>
+    `,
+    solution: `<div class="definition-box"><strong>المعطيات:</strong> عدد أعضاء الطاقم هو 25+12+15+8=60. عدد الإناث هو 15+8=23. عدد الأطباء هو 12+8=20، ومنهم 8 إناث.</div>
+
+I) 1) احتمال أن يكون العضو المختار أنثى:
+
+P(أنثى)=23/60
+
+<p class="property-box"><strong>الإجابة الصحيحة:</strong> ب) 23/60.</p>
+
+I) 2) احتمال أن يكون العضو المختار أنثى علما أنها طبيبة:
+
+P(أنثى / طبيب)=عدد الطبيبات / عدد الأطباء
+=8/20
+=2/5
+
+<p class="property-box"><strong>الإجابة الصحيحة:</strong> أ) 2/5.</p>
+
+II) 1) حساب تباين قانون الاحتمال:
+
+E(X)=1×0.2 + 2×0.4 + 3×0.1 + 4×0.3
+=0.2+0.8+0.3+1.2
+=2.5
+
+E(X²)=1²×0.2 + 2²×0.4 + 3²×0.1 + 4²×0.3
+=0.2+1.6+0.9+4.8
+=7.5
+
+V(X)=E(X²)-[E(X)]²
+=7.5-(2.5)²
+=7.5-6.25
+=1.25
+
+<p class="property-box"><strong>الإجابة الصحيحة:</strong> ج) 1.25.</p>
+
+II) 2) إذا كانت A وB مستقلتين:
+
+P(A∩B)=P(A)×P(B)
+=0.4×0.3
+=0.12
+
+<p class="property-box"><strong>الإجابة الصحيحة:</strong> أ) 0.12.</p>`
+  },
+  {
+    id: 40,
+    track: "management",
+    year: 2015,
+    topic: "الموضوع الأول",
+    text: `التمرين الأول: (04 نقاط)
+
+اختر الاقتراح الصحيح الوحيد من بين الاقتراحات الثلاثة مع التبرير في كل حالة من الحالات الآتية:
+
+1) نعتبر المتتالية (uₙ) المعرفة من أجل كل عدد طبيعي n بحدها العام:
+uₙ = 5×2ⁿ×3ⁿ⁻¹
+المتتالية (uₙ):
+أ) هندسية      ب) حسابية      ج) ليست هندسية ولا حسابية
+
+2) (vₙ) متتالية حسابية حدها الأول v₀=1 وأساسها 4. قيمة n التي من أجلها يكون:
+v₁+v₂+...+vₙ=2015
+هي:
+أ) n=31      ب) n=32      ج) n=33
+
+3) منحنى الدالة f المعرفة على R بـ f(x)=(x²-1)³ يقبل مماسا في النقطة ذات الفاصلة √2 معادلته:
+أ) y=√2x+1      ب) y=6√2x-11      ج) y=6√2x+1
+
+4) A وB حادثتان من مجموعة إمكانيات، حيث P(A)=0.3 و P_A(B)=0.4. فإن:
+أ) P(A∩B)=0.12      ب) P(A∩B)=0.1      ج) P(A∩B)=0.7
+
+5) A وB حادثتان مستقلتان من مجموعة إمكانيات، حيث P(A)=0.3 و P(B)=0.4. فإن:
+أ) P(A∪B)=0.7      ب) P(A∪B)=0.58      ج) P(A∪B)=0.12
+
+6) A وB حادثتان من مجموعة إمكانيات، حيث P(A)=0.3 و P_A(B)=0.4 و P(A∪B)=0.68. فإن:
+أ) P(B)=0.204      ب) P(B)=0.272      ج) P(B)=0.5`,
+    solution: `<div class="definition-box"><strong>فكرة الحل:</strong> نبرر كل اختيار بحساب مباشر أو باستعمال العلاقة المناسبة.</div>
+
+1) لدينا:
+
+uₙ = 5×2ⁿ×3ⁿ⁻¹
+= (5/3)×2ⁿ×3ⁿ
+= (5/3)×6ⁿ
+
+إذن المتتالية هندسية أساسها 6.
+
+<p class="property-box"><strong>الإجابة الصحيحة:</strong> أ) هندسية.</p>
+
+2) بما أن v₀=1 وأساس المتتالية الحسابية هو 4، فإن:
+
+vₙ=1+4n
+
+إذن:
+v₁=5 و vₙ=1+4n
+
+مجموع الحدود من v₁ إلى vₙ هو:
+S = n(v₁+vₙ)/2
+= n(5+1+4n)/2
+= n(4n+6)/2
+= n(2n+3)
+
+نحل:
+n(2n+3)=2015
+
+بتجريب الاختيارات:
+لـ n=31 نجد 31×65=2015.
+
+<p class="property-box"><strong>الإجابة الصحيحة:</strong> أ) n=31.</p>
+
+3) f(x)=(x²-1)³
+
+f'(x)=3(x²-1)²×2x
+=6x(x²-1)²
+
+عند x=√2:
+f(√2)=(2-1)³=1
+f'(√2)=6√2(2-1)²=6√2
+
+معادلة المماس:
+y=f'(√2)(x-√2)+f(√2)
+=6√2(x-√2)+1
+=6√2x-12+1
+=6√2x-11
+
+<p class="property-box"><strong>الإجابة الصحيحة:</strong> ب) y=6√2x-11.</p>
+
+4) حسب تعريف الاحتمال الشرطي:
+
+P_A(B)=P(A∩B)/P(A)
+
+إذن:
+P(A∩B)=P(A)×P_A(B)
+=0.3×0.4
+=0.12
+
+<p class="property-box"><strong>الإجابة الصحيحة:</strong> أ) P(A∩B)=0.12.</p>
+
+5) بما أن A وB مستقلتان:
+
+P(A∩B)=P(A)×P(B)=0.3×0.4=0.12
+
+إذن:
+P(A∪B)=P(A)+P(B)-P(A∩B)
+=0.3+0.4-0.12
+=0.58
+
+<p class="property-box"><strong>الإجابة الصحيحة:</strong> ب) P(A∪B)=0.58.</p>
+
+6) أولا:
+P(A∩B)=P(A)×P_A(B)
+=0.3×0.4
+=0.12
+
+ومن علاقة الاتحاد:
+P(A∪B)=P(A)+P(B)-P(A∩B)
+
+0.68=0.3+P(B)-0.12
+
+P(B)=0.68-0.18
+=0.5
+
+<p class="property-box"><strong>الإجابة الصحيحة:</strong> ج) P(B)=0.5.</p>`
+  },
+  {
+    id: 41,
+    track: "management",
+    year: 2015,
+    topic: "الموضوع الثاني",
+    text: `التمرين الأول: (04 نقاط)
+
+مصنع سيارات يشتغل بوحدتين A وB وينتج نوعين: سيارات تسير بالبنزين نرمز إليها بـ E، وأخرى بغير البنزين نرمز إليها بـ Ē.
+
+ربع إنتاج هذا المصنع تصنعه الوحدة A.
+
+اشترى شخص سيارة من إنتاج هذا المصنع. احتمال أن تكون هذه السيارة من صنع الوحدة A وتسير بالبنزين يساوي 1/6، واحتمال أن تكون من صنع الوحدة B وتسير بالبنزين يساوي 3/8.
+
+تعطى كل النتائج على شكل كسر غير قابل للاختزال.
+
+1) بين أن احتمال أن تكون السيارة تسير بالبنزين علما أنها من صنع الوحدة A يساوي 2/3.
+2) احسب احتمال أن تكون السيارة تسير بالبنزين علما أنها من صنع الوحدة B.
+3) أ) احسب احتمال أن تكون السيارة تسير بالبنزين.
+   ب) علما أن السيارة تسير بالبنزين، ما احتمال أن تكون من صنع الوحدة A؟
+4) أنجز شجرة الاحتمالات التي تمثل هذه الوضعية.`,
+    solution: `<div class="definition-box"><strong>المعطيات:</strong> P(A)=1/4، إذن P(B)=3/4. كما أن P(A∩E)=1/6 و P(B∩E)=3/8.</div>
+
+1) حساب P_A(E):
+
+P_A(E)=P(E/A)=P(A∩E)/P(A)
+=(1/6)/(1/4)
+=1/6×4
+=4/6=2/3
+
+<p class="property-box"><strong>تبيان:</strong> P_A(E)=2/3.</p>
+
+2) حساب P_B(E):
+
+P_B(E)=P(E/B)=P(B∩E)/P(B)
+=(3/8)/(3/4)
+=3/8×4/3
+=1/2
+
+<p class="property-box"><strong>النتيجة:</strong> P_B(E)=1/2.</p>
+
+3) أ) احتمال أن تكون السيارة تسير بالبنزين:
+
+P(E)=P(A∩E)+P(B∩E)
+=1/6+3/8
+=4/24+9/24
+=13/24
+
+<p class="property-box"><strong>النتيجة:</strong> P(E)=13/24.</p>
+
+ب) احتمال أن تكون السيارة من صنع الوحدة A علما أنها تسير بالبنزين:
+
+P(A/E)=P(A∩E)/P(E)
+=(1/6)/(13/24)
+=1/6×24/13
+=4/13
+
+<p class="property-box"><strong>النتيجة:</strong> P(A/E)=4/13.</p>
+
+4) شجرة الاحتمالات:
+
+<svg class="bac-tree" viewBox="0 0 640 330" role="img" aria-label="شجرة احتمالات بكالوريا 2015 تسيير واقتصاد الموضوع الثاني">
+  <defs>
+    <marker id="bacTreeArrow2015ManagementTopic2" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z"></path>
+    </marker>
+  </defs>
+  <line x1="45" y1="165" x2="215" y2="90" marker-end="url(#bacTreeArrow2015ManagementTopic2)"></line>
+  <line x1="45" y1="165" x2="215" y2="240" marker-end="url(#bacTreeArrow2015ManagementTopic2)"></line>
+  <line x1="240" y1="90" x2="445" y2="55" marker-end="url(#bacTreeArrow2015ManagementTopic2)"></line>
+  <line x1="240" y1="90" x2="445" y2="125" marker-end="url(#bacTreeArrow2015ManagementTopic2)"></line>
+  <line x1="240" y1="240" x2="445" y2="205" marker-end="url(#bacTreeArrow2015ManagementTopic2)"></line>
+  <line x1="240" y1="240" x2="445" y2="275" marker-end="url(#bacTreeArrow2015ManagementTopic2)"></line>
+  <text x="118" y="103">1/4</text>
+  <text x="118" y="235">3/4</text>
+  <text x="320" y="58">2/3</text>
+  <text x="320" y="130">1/3</text>
+  <text x="320" y="208">1/2</text>
+  <text x="320" y="280">1/2</text>
+  <text x="228" y="84">A</text>
+  <text x="228" y="255">B</text>
+  <text x="462" y="59">E</text>
+  <text x="462" y="129">Ē</text>
+  <text x="462" y="209">E</text>
+  <text x="462" y="279">Ē</text>
+</svg>`
+  },
+  {
+    id: 42,
+    track: "management",
+    year: 2016,
+    topic: "الموضوع الأول",
+    text: `التمرين الأول: (04 نقاط)
+
+الجدول التالي يعطي توزيع 500 تلميذ في إحدى الثانويات.
+
+نختار عشوائيا تلميذا من الثانوية ونسمي H الحادثة: "التلميذ المختار ذكر"، وF الحادثة: "التلميذ المختار أنثى"، وS الحادثة: "التلميذ يملك هاتفا نقالا"، وS̄ الحادثة: "التلميذ لا يملك هاتفا نقالا".
+
+1) شكل شجرة الاحتمالات لهذه التجربة.
+2) احسب احتمال الحوادث التالية:
+أ) التلميذ المختار أنثى وتملك هاتفا نقالا.
+ب) التلميذ المختار لا يملك هاتفا نقالا.
+3) نفرض أن التلميذ المختار لا يملك هاتفا نقالا. ما هو احتمال أن يكون هذا التلميذ ذكرا؟`,
+    diagram: `
+      <table class="bac-data-table" aria-label="توزيع التلاميذ حسب الجنس وامتلاك الهاتف النقال">
+        <thead>
+          <tr>
+            <th>التلميذ</th>
+            <th>ذكور</th>
+            <th>إناث</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>يملك هاتف نقال</th>
+            <td>60</td>
+            <td>240</td>
+          </tr>
+          <tr>
+            <th>لا يملك هاتف نقال</th>
+            <td>120</td>
+            <td>80</td>
+          </tr>
+        </tbody>
+      </table>
+    `,
+    solution: `<div class="definition-box"><strong>المعطيات:</strong> عدد التلاميذ الكلي 500. عدد الذكور 60+120=180، وعدد الإناث 240+80=320. إذن P(H)=180/500=9/25 و P(F)=320/500=16/25.</div>
+
+1) شجرة الاحتمالات:
+
+<svg class="bac-tree" viewBox="0 0 640 330" role="img" aria-label="شجرة احتمالات بكالوريا 2016 تسيير واقتصاد الموضوع الأول">
+  <defs>
+    <marker id="bacTreeArrow2016ManagementTopic1" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z"></path>
+    </marker>
+  </defs>
+  <line x1="45" y1="165" x2="215" y2="90" marker-end="url(#bacTreeArrow2016ManagementTopic1)"></line>
+  <line x1="45" y1="165" x2="215" y2="240" marker-end="url(#bacTreeArrow2016ManagementTopic1)"></line>
+  <line x1="240" y1="90" x2="445" y2="55" marker-end="url(#bacTreeArrow2016ManagementTopic1)"></line>
+  <line x1="240" y1="90" x2="445" y2="125" marker-end="url(#bacTreeArrow2016ManagementTopic1)"></line>
+  <line x1="240" y1="240" x2="445" y2="205" marker-end="url(#bacTreeArrow2016ManagementTopic1)"></line>
+  <line x1="240" y1="240" x2="445" y2="275" marker-end="url(#bacTreeArrow2016ManagementTopic1)"></line>
+  <text x="118" y="103">9/25</text>
+  <text x="118" y="235">16/25</text>
+  <text x="320" y="58">1/3</text>
+  <text x="320" y="130">2/3</text>
+  <text x="320" y="208">3/4</text>
+  <text x="320" y="280">1/4</text>
+  <text x="228" y="84">H</text>
+  <text x="228" y="255">F</text>
+  <text x="462" y="59">S</text>
+  <text x="462" y="129">S̄</text>
+  <text x="462" y="209">S</text>
+  <text x="462" y="279">S̄</text>
+</svg>
+
+لأن:
+P(S/H)=60/180=1/3، P(S̄/H)=120/180=2/3
+P(S/F)=240/320=3/4، P(S̄/F)=80/320=1/4
+
+2) أ) احتمال أن يكون التلميذ المختار أنثى وتملك هاتفا نقالا:
+
+P(F∩S)=240/500=12/25
+
+أو من الشجرة:
+P(F∩S)=P(F)×P(S/F)=16/25×3/4=12/25
+
+<p class="property-box"><strong>النتيجة:</strong> P(F∩S)=12/25.</p>
+
+ب) احتمال أن يكون التلميذ المختار لا يملك هاتفا نقالا:
+
+عدد الذين لا يملكون هاتفا نقالا هو 120+80=200.
+
+P(S̄)=200/500=2/5
+
+<p class="property-box"><strong>النتيجة:</strong> P(S̄)=2/5.</p>
+
+3) علما أن التلميذ المختار لا يملك هاتفا نقالا، احتمال أن يكون ذكرا:
+
+P(H/S̄)=P(H∩S̄)/P(S̄)
+
+P(H∩S̄)=120/500
+و P(S̄)=200/500
+
+إذن:
+P(H/S̄)=120/200=3/5
+
+<p class="property-box"><strong>النتيجة:</strong> الاحتمال هو 3/5.</p>`
   }
 ];
 

@@ -26,6 +26,15 @@ const bacTrackLabels = {
   management: "تسيير واقتصاد",
 };
 
+const bacTracksByBranch = {
+  science: ["experimental", "math", "technical"],
+  literary: ["management"],
+};
+
+function bacTracksForBranch(branch = state.branch) {
+  return bacTracksByBranch[branch] || bacTracksByBranch.science;
+}
+
 const modules = [
   {
     id: "counting",
@@ -6213,6 +6222,7 @@ function saveProgress() {
 }
 
 function activeModules() {
+  if (state.branch === "literary") return modules.filter((module) => module.branch === "literary");
   return modules.filter((module) => module.branch === "common" || module.branch === state.branch);
 }
 
@@ -6247,6 +6257,10 @@ function setBranch(branch) {
   state.branch = branch;
   document.querySelectorAll("[data-branch]").forEach((btn) => btn.classList.toggle("active", btn.dataset.branch === branch));
   if (!activeModules().some((module) => module.id === state.moduleId)) state.moduleId = activeModules()[0].id;
+  const allowedBacTracks = bacTracksForBranch(branch);
+  if (state.bacTrackFilter !== "all" && !allowedBacTracks.includes(state.bacTrackFilter)) {
+    state.bacTrackFilter = "all";
+  }
   state.bacYearFilter = "الكل";
   renderAll();
 }
@@ -7399,7 +7413,7 @@ function renderPractice() {
 }
 
 function renderBac() {
-  const allowedTracks = Object.keys(bacTrackLabels).filter((track) => track !== "all");
+  const allowedTracks = bacTracksForBranch();
   if (state.bacTrackFilter !== "all" && !allowedTracks.includes(state.bacTrackFilter)) {
     state.bacTrackFilter = "all";
   }
@@ -7408,11 +7422,13 @@ function renderBac() {
     ? branchExercises
     : branchExercises.filter((ex) => ex.track === state.bacTrackFilter);
   const visibleTrackLabels = [
-    ["all", "كل الشعب"],
+    ["all", state.branch === "literary" ? "كل مواضيع الأدبي" : "كل الشعب العلمية"],
     ...allowedTracks.map((track) => [track, bacTrackLabels[track]]),
   ];
-  const bacIntroTitle = "بكالوريا جزائرية";
-  const bacIntroText = "مواضيع وتمارين حسب الشعب";
+  const bacIntroTitle = state.branch === "literary" ? "بكالوريا الشعب الأدبية" : "بكالوريا الشعب العلمية";
+  const bacIntroText = state.branch === "literary"
+    ? "مسار أدبي هادئ يركز على مواضيع التسيير والاقتصاد، دون عرض شعب العلوم التجريبية أو الرياضيات أو التقني الرياضي."
+    : "مواضيع العلوم التجريبية والرياضيات والتقني الرياضي مرتبة من الأحدث إلى الأقدم.";
   const years = ["الكل", ...new Set(trackFiltered.map((ex) => ex.year))].sort((a, b) => {
     if (a === "الكل") return -1;
     if (b === "الكل") return 1;

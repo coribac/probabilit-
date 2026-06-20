@@ -4090,6 +4090,121 @@ P(A∩E)=1/6
 فإن الحادثتين غير مستقلتين.
 
 <p class="property-box"><strong>النتيجة:</strong> الحادثتان "التلميذ من السنة الأولى" و"التلميذ خارجي" غير مستقلتين.</p>`
+  },
+  {
+    id: 34,
+    track: "management",
+    year: 2012,
+    topic: "الموضوع الأول",
+    text: `التمرين الأول: (04 نقاط)
+
+وجهت مؤسسة تعليمية دعوات لعدد من التلاميذ للمشاركة في نشاط رياضي. بلغ عدد التلاميذ المشاركين 50 تلميذا، من بينهم 35 ولدا و15 بنتا.
+
+اختار 75% من الأولاد ممارسة كرة القدم، و15% منهم ممارسة كرة اليد، والباقي ممارسة الكرة الطائرة. أما 60% من البنات فاخترن ممارسة الكرة الطائرة، والبقية اخترن ممارسة كرة اليد.
+
+نختار عشوائيا أحد التلاميذ المشاركين، ونعتبر الحوادث التالية:
+F: "التلميذ المختار بنت"
+T: "التلميذ المختار يمارس كرة القدم"
+H: "التلميذ المختار يمارس كرة اليد"
+V: "التلميذ المختار يمارس الكرة الطائرة"
+
+1) أنقل الشجرة المقابلة لهذه الوضعية ثم أكملها.
+2) احسب P(V) احتمال تحقق الحادثة V.
+3) احسب P_F(V).
+4) احسب احتمال أن يكون التلميذ المختار لا يمارس كرة القدم.`,
+    diagram: `
+      <svg class="bac-tree" viewBox="0 0 620 340" role="img" aria-label="شجرة احتمالات ناقصة لبكالوريا 2012 تسيير واقتصاد الموضوع الأول">
+        <defs>
+          <marker id="bacTreeArrow2012ManagementTopic1" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+            <path d="M0,0 L8,4 L0,8 Z"></path>
+          </marker>
+        </defs>
+        <line x1="45" y1="170" x2="205" y2="95" marker-end="url(#bacTreeArrow2012ManagementTopic1)"></line>
+        <line x1="45" y1="170" x2="205" y2="250" marker-end="url(#bacTreeArrow2012ManagementTopic1)"></line>
+        <line x1="230" y1="95" x2="420" y2="50" marker-end="url(#bacTreeArrow2012ManagementTopic1)"></line>
+        <line x1="230" y1="95" x2="420" y2="95" marker-end="url(#bacTreeArrow2012ManagementTopic1)"></line>
+        <line x1="230" y1="95" x2="420" y2="140" marker-end="url(#bacTreeArrow2012ManagementTopic1)"></line>
+        <line x1="230" y1="250" x2="420" y2="220" marker-end="url(#bacTreeArrow2012ManagementTopic1)"></line>
+        <line x1="230" y1="250" x2="420" y2="295" marker-end="url(#bacTreeArrow2012ManagementTopic1)"></line>
+        <text x="112" y="112">----</text>
+        <text x="112" y="250">----</text>
+        <text x="300" y="55">75/100</text>
+        <text x="300" y="100">----</text>
+        <text x="300" y="145">----</text>
+        <text x="300" y="225">----</text>
+        <text x="300" y="292">60/100</text>
+        <text x="218" y="87">F̄</text>
+        <text x="218" y="265">F</text>
+        <text x="435" y="54">T</text>
+        <text x="435" y="99">H</text>
+        <text x="435" y="144">V</text>
+        <text x="435" y="224">H</text>
+        <text x="435" y="299">V</text>
+      </svg>
+    `,
+    solution: `<div class="definition-box"><strong>المعطيات:</strong> عدد التلاميذ 50، منهم 35 ولدا و15 بنتا. نرمز بـ F إلى حادثة "بنت"، إذن P(F)=15/50=3/10 و P(F̄)=35/50=7/10.</div>
+
+1) الشجرة المكتملة:
+
+<svg class="bac-tree" viewBox="0 0 620 340" role="img" aria-label="الشجرة المكتملة لبكالوريا 2012 تسيير واقتصاد الموضوع الأول">
+  <defs>
+    <marker id="bacTreeArrow2012ManagementTopic1Solved" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z"></path>
+    </marker>
+  </defs>
+  <line x1="45" y1="170" x2="205" y2="95" marker-end="url(#bacTreeArrow2012ManagementTopic1Solved)"></line>
+  <line x1="45" y1="170" x2="205" y2="250" marker-end="url(#bacTreeArrow2012ManagementTopic1Solved)"></line>
+  <line x1="230" y1="95" x2="420" y2="50" marker-end="url(#bacTreeArrow2012ManagementTopic1Solved)"></line>
+  <line x1="230" y1="95" x2="420" y2="95" marker-end="url(#bacTreeArrow2012ManagementTopic1Solved)"></line>
+  <line x1="230" y1="95" x2="420" y2="140" marker-end="url(#bacTreeArrow2012ManagementTopic1Solved)"></line>
+  <line x1="230" y1="250" x2="420" y2="220" marker-end="url(#bacTreeArrow2012ManagementTopic1Solved)"></line>
+  <line x1="230" y1="250" x2="420" y2="295" marker-end="url(#bacTreeArrow2012ManagementTopic1Solved)"></line>
+  <text x="112" y="112">7/10</text>
+  <text x="112" y="250">3/10</text>
+  <text x="300" y="55">75/100</text>
+  <text x="300" y="100">15/100</text>
+  <text x="300" y="145">10/100</text>
+  <text x="300" y="225">40/100</text>
+  <text x="300" y="292">60/100</text>
+  <text x="218" y="87">F̄</text>
+  <text x="218" y="265">F</text>
+  <text x="435" y="54">T</text>
+  <text x="435" y="99">H</text>
+  <text x="435" y="144">V</text>
+  <text x="435" y="224">H</text>
+  <text x="435" y="299">V</text>
+</svg>
+
+2) حساب P(V):
+
+P(V)=P(F̄∩V)+P(F∩V)
+=P(F̄)×P(V/F̄)+P(F)×P(V/F)
+=(7/10)×(10/100)+(3/10)×(60/100)
+=7/100+18/100
+=25/100=1/4
+
+<p class="property-box"><strong>النتيجة:</strong> P(V)=1/4.</p>
+
+3) حساب P_F(V):
+من الشجرة مباشرة:
+
+P_F(V)=P(V/F)=60/100=3/5
+
+<p class="property-box"><strong>النتيجة:</strong> P_F(V)=3/5.</p>
+
+4) احتمال أن يكون التلميذ المختار لا يمارس كرة القدم:
+كرة القدم تظهر فقط عند فرع الأولاد في هذه الشجرة، لذلك:
+
+P(T)=P(F̄)×P(T/F̄)
+=(7/10)×(75/100)
+=525/1000=21/40
+
+إذن:
+P(T̄)=1-P(T)
+=1-21/40
+=19/40
+
+<p class="property-box"><strong>النتيجة:</strong> احتمال ألا يمارس التلميذ المختار كرة القدم هو 19/40.</p>`
   }
 ];
 

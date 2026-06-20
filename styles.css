@@ -295,6 +295,22 @@ h1, h2, h3, h4, p { margin-top: 0; }
   gap: 8px;
 }
 
+.lesson-parts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.lesson-parts span {
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(24, 214, 163, .08);
+  color: var(--muted);
+  font-size: .86rem;
+  font-weight: 800;
+}
+
 .badge {
   display: inline-flex;
   padding: 4px 9px;

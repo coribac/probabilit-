@@ -28,7 +28,7 @@ const bacTrackLabels = {
 
 const bacTracksByBranch = {
   science: ["experimental", "math", "technical", "management"],
-  literary: ["management"],
+  literary: [],
 };
 
 function bacTracksForBranch(branch = state.branch) {
@@ -648,6 +648,414 @@ const modules = [
     ],
   },
   {
+    id: "literary-simulation",
+    branch: "literary",
+    title: "الدرس الأول: محاكاة تجربة عشوائية - تذبذب العينات",
+    summary: "تعريف التجربة العشوائية والعينة والمحاكاة، ثم ملاحظة تذبذب التكرارات حسب حجم العينة.",
+    tags: ["أدبي", "الدرس الأول", "محاكاة"],
+    lesson: `
+      <section class="definition-box">
+        <strong>تجربة عشوائية:</strong>
+        <p>نقول عن تجربة إنها عشوائية عندما لا يمكن أن نجزم مسبقًا بنتيجتها قبل إجرائها.</p>
+      </section>
+      <section class="warning-box">
+        <strong>ملاحظة:</strong>
+        <p>الحظ لا يتدخل في كل الأنشطة؛ فبعض التجارب تكون نتائجها منتظمة أو قابلة للتوقع إذا توافرت الشروط نفسها.</p>
+      </section>
+      <section class="lesson-block">
+        <h4>العينة</h4>
+        <p>نسمي عينة مقاسها <span class="math">n</span> كل سلسلة إحصائية مشكلة من النتائج المحصل عليها عند تكرار التجربة <span class="math">n</span> مرة في نفس الظروف.</p>
+      </section>
+      <section class="lesson-block">
+        <h4>المحاكاة</h4>
+        <p>نقول إننا قمنا بمحاكاة تجربة عشوائية إذا عوضناها بتجربة أخرى لها نفس عدد الحالات الممكنة، ونستعملها عندما يصعب إنجاز التجربة الأصلية أو نريد تكرارها بسرعة.</p>
+        <p class="muted-note">وسيلة مثل: نرد، قرص مرقم، بطاقات، أو مولد أعداد عشوائية.</p>
+      </section>
+      <section class="property-box">
+        <strong>الفكرة الأساسية:</strong>
+        <p>عند تكرار تجربة عشوائية مرات قليلة تكون التكرارات متذبذبة، وكلما كبر حجم العينة تميل التواترات إلى الاستقرار.</p>
+      </section>
+    `,
+    activities: [
+      {
+        title: "نشاط: محاكاة سحب قرص مرقم",
+        body: "نسحب عشوائيًا ودون إرجاع قرصًا من كيس يحتوي على 4 أقراص مرقمة من 1 إلى 4. نكرر السحب 10 مرات، ثم نعيد التجربة داخل القسم بعينات مقاسها 20 و100 و300.",
+        visual: `
+          <table class="theory-table activity-table">
+            <thead><tr><th>النتائج الممكنة</th><th>1</th><th>2</th><th>3</th><th>4</th></tr></thead>
+            <tbody>
+              <tr><th>التكرار</th><td></td><td></td><td></td><td></td></tr>
+              <tr><th>التواتر</th><td></td><td></td><td></td><td></td></tr>
+            </tbody>
+          </table>
+          <table class="theory-table activity-table">
+            <thead><tr><th>العينة</th><th>النتائج الممكنة</th><th>1</th><th>2</th><th>3</th><th>4</th></tr></thead>
+            <tbody>
+              <tr><th rowspan="2">20</th><th>التكرارات</th><td></td><td></td><td></td><td></td></tr>
+              <tr><th>التواترات</th><td></td><td></td><td></td><td></td></tr>
+              <tr><th rowspan="2">100</th><th>التكرارات</th><td></td><td></td><td></td><td></td></tr>
+              <tr><th>التواترات</th><td></td><td></td><td></td><td></td></tr>
+              <tr><th rowspan="2">300</th><th>التكرارات</th><td></td><td></td><td></td><td></td></tr>
+              <tr><th>التواترات</th><td></td><td></td><td></td><td></td></tr>
+            </tbody>
+          </table>
+        `,
+        prompts: [
+          "ما هي النتائج الممكنة لهذه التجربة؟",
+          "أكمل جدول التكرارات والتواترات لعينة مقاسها 10.",
+          "قارن بين عينات مقاسها 20 و100 و300: ماذا تلاحظ؟",
+        ],
+        solution: "النتائج الممكنة هي {1,2,3,4}. التكرار هو عدد مرات ظهور كل نتيجة، والتواتر يساوي التكرار مقسومًا على حجم العينة. عند العينات الصغيرة تظهر التواترات متذبذبة، وعند تكبير حجم العينة تميل التواترات إلى الاستقرار حول 1/4 لكل نتيجة لأن الأقراص الأربعة متماثلة في الإمكان.",
+      },
+    ],
+    exercises: [
+      {
+        title: "تمرين محلول 1: صندوق الكرات المرقمة",
+        statement: "يحتوي صندوق على 5 كرات مرقمة من 1 إلى 5 لا نفرق بينها عند اللمس. نسحب على التوالي 3 كرات بإرجاع، ثم نكوّن عددًا من ثلاثة أرقام بالترتيب الذي ظهرت به الكرات المسحوبة. احسب عدد الأعداد الممكنة، وعدد الأعداد ذات الأرقام المختلفة، ثم احتمال أن تكون الكرية الثانية المسحوبة تحمل الرقم 4.",
+        solution: `بما أن السحب يتم مع الإرجاع، فلكل مرتبة من مراتب العدد 5 إمكانيات: رقم المئات، رقم العشرات، ورقم الآحاد. إذن عدد الأعداد الممكنة هو 5×5×5=125.<br><br>
+        للحصول على أعداد ذات أرقام مختلفة نختار رقم المئات بـ 5 إمكانيات، ثم رقم العشرات بـ 4 إمكانيات، ثم رقم الآحاد بـ 3 إمكانيات. إذن عددها 5×4×3=60.<br><br>
+        الحدث A: الكرية الثانية تحمل الرقم 4. في السحب الثاني توجد 5 إمكانيات متساوية، واحتمال ظهور الرقم 4 هو 1/5. كما يمكن العد: رقم المئات له 5 إمكانيات، رقم العشرات ثابت ويساوي 4، رقم الآحاد له 5 إمكانيات، إذن الحالات الملائمة 5×1×5=25 من أصل 125، ومنه P(A)=25/125=1/5.`,
+      },
+      {
+        title: "تمرين محلول 2: لعبة رمي حجرين",
+        statement: "يدفع لاعبان A وB مبلغ 10 دنانير على الترتيب. يرمي منظم اللعبة حجري نرد متوازنين، كل منهما له أربعة أوجه مرقمة من 1 إلى 4. يدفع للاعب A ضعف مجموع رقمي الوجهين الظاهرين بعد الرمي. احسب أمل الربح عند اللاعب A.",
+        solution: `مجموعة القيم الممكنة لمجموع رقمي الوجهين هي S={2,3,4,5,6,7,8}. عدد الحالات الكلي 4×4=16.<br>
+        <table class="theory-table">
+          <thead><tr><th>xᵢ</th><th>-2</th><th>0</th><th>2</th><th>4</th><th>6</th><th>8</th><th>10</th></tr></thead>
+          <tbody><tr><th>pᵢ</th><td>1/16</td><td>2/16</td><td>3/16</td><td>4/16</td><td>3/16</td><td>2/16</td><td>1/16</td></tr></tbody>
+        </table>
+        لأن اللاعب A يدفع 10 دنانير ويأخذ ضعف المجموع، فإن الربح الصافي هو: 2S-10، وقيمه هي -2، 0، 2، 4، 6، 8، 10.<br><br>
+        الأمل الرياضي هو:<br>
+        μ = 1/16×(-2)+2/16×0+3/16×2+4/16×4+3/16×6+2/16×8+1/16×10 = 64/16 = 4.<br><br>
+        إذن أمل الربح بالنسبة للاعب A هو 4 دنانير، أي إن اللعبة في صالح اللاعب A إذا قورنت بمبلغ الدخول.`,
+      },    ],
+  },  {
+    id: "literary-law",
+    branch: "literary",
+    title: "الدرس الثاني: قانون احتمال تجربة عشوائية",
+    summary: "تعيين قانون احتمال متغير عشوائي، ثم حساب الأمل الرياضي والتباين والانحراف المعياري.",
+    tags: ["أدبي", "الدرس الثاني", "قانون احتمال"],
+    lesson: `
+      <section class="definition-box">
+        <strong>قانون احتمال تجربة عشوائية:</strong>
+        <p>عند القيام بتجربة عشوائية والحصول على نتائج ممكنة <span class="math">x_1,x_2,...,x_n</span>، نرفق بكل نتيجة احتمالها <span class="math">p_i</span>.</p>
+        <div class="math-equation">0 <= p_i <= 1 و Σ p_i = 1</div>
+      </section>
+      <section class="lesson-block">
+        <h4>تمثيل قانون الاحتمال</h4>
+        <p>نمثل قانون الاحتمال عادة في جدول من سطرين: السطر الأول للقيم الممكنة، والسطر الثاني لاحتمال كل قيمة.</p>
+        <table class="theory-table">
+          <thead><tr><th>xᵢ</th><th>x₁</th><th>x₂</th><th>...</th><th>xₙ</th></tr></thead>
+          <tbody><tr><th>pᵢ</th><td>p₁</td><td>p₂</td><td>...</td><td>pₙ</td></tr></tbody>
+        </table>
+      </section>
+      <section class="property-box">
+        <strong>الأمل الرياضي والتباين:</strong>
+        <p>الأمل الرياضي هو معدل القيم الممكنة مرجحة باحتمالاتها.</p>
+        <div class="math-equation">μ = E(X)=Σ pᵢxᵢ</div>
+        <p>التباين يقيس تشتت القيم حول الأمل الرياضي.</p>
+        <div class="math-equation">V(X)=Σ pᵢ(xᵢ-μ)²</div>
+        <div class="math-equation">σ = √V</div>
+      </section>
+      <section class="warning-box">
+        <strong>ملاحظات:</strong>
+        <p>إذا كان <span class="math">X</span> متغيرًا عشوائيًا، فإن <span class="math">E(X)</span> يمثل القيمة المتوسطة المنتظرة عند تكرار التجربة عددًا كبيرًا من المرات.</p>
+      </section>
+    `,
+    activities: [
+      {
+        title: "نشاط: بناء قانون احتمال",
+        body: "يحتوي كيس على 5 كرات متماثلة: 3 كرات بيضاء و2 كرتان سوداوان. نسحب كرتين، ونعرف المتغير العشوائي X بأنه عدد الكرات البيضاء المسحوبة.",
+        prompts: [
+          "ما هي القيم الممكنة للمتغير X؟",
+          "اكتب قانون احتمال X عند السحب في آن واحد.",
+          "قارن هذا القانون مع حالتي السحب المتتالي دون إرجاع والسحب المتتالي مع إرجاع.",
+        ],
+        solution: "القيم الممكنة هي 0 و1 و2. عند السحب في آن واحد أو على التوالي دون إرجاع يكون القانون نفسه: P(X=0)=1/10 و P(X=1)=6/10 و P(X=2)=3/10. أما مع الإرجاع: P(X=0)=4/25 و P(X=1)=12/25 و P(X=2)=9/25.",
+      },
+    ],
+    exercises: [
+      {
+        title: "تمرين محلول 1: اختيار صندوق ثم سحب كرة",
+        statement: "لدينا ثلاثة صناديق A وB وC. الصندوق A يضم 3 كرات حمراء و5 كرات سوداء، والصندوق B يضم كرتين حمراوين وكرية سوداء، والصندوق C يضم كرتين حمراوين و3 كرات سوداء. نأخذ عشوائيًا أحد الصناديق الثلاثة ثم نسحب منه كرة واحدة. إذا كانت الكرة المسحوبة حمراء، فما احتمال أن تكون قد سحبت من الصندوق A؟",
+        visual: `
+          <svg class="activity-visual" viewBox="0 0 660 310" role="img" aria-label="شجرة اختيار صندوق وسحب كرة">
+            <line x1="70" y1="155" x2="220" y2="70" stroke="#55a7ff" stroke-width="4"/>
+            <line x1="70" y1="155" x2="220" y2="155" stroke="#55a7ff" stroke-width="4"/>
+            <line x1="70" y1="155" x2="220" y2="240" stroke="#55a7ff" stroke-width="4"/>
+            <text x="145" y="75" font-size="18">1/3</text><text x="145" y="148" font-size="18">1/3</text><text x="145" y="238" font-size="18">1/3</text>
+            <text x="235" y="76" font-size="22">A</text><text x="235" y="162" font-size="22">B</text><text x="235" y="247" font-size="22">C</text>
+            <line x1="285" y1="70" x2="500" y2="42" stroke="#ff4d4d" stroke-width="4"/>
+            <line x1="285" y1="70" x2="500" y2="98" stroke="#111" stroke-width="4"/>
+            <text x="375" y="43" font-size="18">3/8</text><text x="375" y="103" font-size="18">5/8</text>
+            <line x1="285" y1="155" x2="500" y2="127" stroke="#ff4d4d" stroke-width="4"/>
+            <line x1="285" y1="155" x2="500" y2="183" stroke="#111" stroke-width="4"/>
+            <text x="375" y="128" font-size="18">2/3</text><text x="375" y="188" font-size="18">1/3</text>
+            <line x1="285" y1="240" x2="500" y2="212" stroke="#ff4d4d" stroke-width="4"/>
+            <line x1="285" y1="240" x2="500" y2="268" stroke="#111" stroke-width="4"/>
+            <text x="375" y="213" font-size="18">2/5</text><text x="375" y="273" font-size="18">3/5</text>
+            <text x="520" y="48" font-size="22" fill="#ff4d4d">R</text><text x="520" y="104" font-size="22">N</text>
+            <text x="520" y="133" font-size="22" fill="#ff4d4d">R</text><text x="520" y="189" font-size="22">N</text>
+            <text x="520" y="218" font-size="22" fill="#ff4d4d">R</text><text x="520" y="274" font-size="22">N</text>
+          </svg>
+        `,
+        solution: `نرمز للكرة الحمراء بـ R وللكرة السوداء بـ N. احتمال اختيار كل صندوق هو 1/3.<br>
+        لدينا: P(A∩R)=1/3×3/8=1/8.<br>
+        واحتمال سحب كرة حمراء هو:<br>
+        P(R)=1/3×3/8 + 1/3×2/3 + 1/3×2/5 = 1/8 + 2/9 + 2/15 = 173/360.<br>
+        إذن باستعمال الاحتمال الشرطي:<br>
+        P_R(A)=P(A∩R)/P(R) = (1/8)/(173/360)=45/173.`,
+      },
+      {
+        title: "تمرين محلول 2: ثلاث سحبات مع تغيير محتوى الصندوق",
+        statement: "كيس يحتوي كرتين حمراوين وثلاث كرات خضراء. نسحب عشوائيًا كرية واحدة. إذا كانت بيضاء نعيدها إلى الصندوق ونضيف كرة بيضاء أخرى، وإذا كانت سوداء نعيدها إلى الصندوق مع إضافة كرة سوداء أخرى، ثم نعيد العملية لسحبة ثانية وثالثة. أوجد احتمال الحادثة A: وجود ثلاث كرات سوداء في الصندوق قبل السحبة الثالثة، واحتمال الحادثة B: وجود خمس كرات بيضاء في الصندوق قبل السحبة الثالثة.",
+        visual: `
+          <svg class="activity-visual" viewBox="0 0 680 320" role="img" aria-label="شجرة تغير محتوى الصندوق">
+            <text x="60" y="45" font-size="18">(3,2)</text>
+            <line x1="115" y1="55" x2="285" y2="95" stroke="#ff4d4d" stroke-width="4"/>
+            <line x1="115" y1="55" x2="285" y2="205" stroke="#2ed47a" stroke-width="4"/>
+            <text x="185" y="86" font-size="18">2/5</text><text x="185" y="198" font-size="18">3/5</text>
+            <text x="300" y="100" font-size="18">(3,3)</text><text x="300" y="210" font-size="18">(4,2)</text>
+            <line x1="360" y1="100" x2="530" y2="58" stroke="#ff4d4d" stroke-width="4"/>
+            <line x1="360" y1="100" x2="530" y2="142" stroke="#2ed47a" stroke-width="4"/>
+            <text x="430" y="58" font-size="18">3/6</text><text x="430" y="145" font-size="18">3/6</text>
+            <line x1="360" y1="210" x2="530" y2="178" stroke="#ff4d4d" stroke-width="4"/>
+            <line x1="360" y1="210" x2="530" y2="258" stroke="#2ed47a" stroke-width="4"/>
+            <text x="430" y="178" font-size="18">2/6</text><text x="430" y="262" font-size="18">4/6</text>
+            <text x="550" y="63" font-size="18">(3,4)</text><text x="550" y="148" font-size="18">(4,3)</text>
+            <text x="550" y="183" font-size="18">(4,3)</text><text x="550" y="263" font-size="18">(5,2)</text>
+          </svg>
+        `,
+        solution: `نمثل محتوى الصندوق بالثنائية (عدد الكرات البيضاء، عدد الكرات السوداء)، والبداية هي (3,2).<br>
+        قبل السحبة الثانية نحصل على: (3,3) باحتمال 2/5 أو (4,2) باحتمال 3/5.<br><br>
+        الحادثة A: وجود ثلاث كرات سوداء قبل السحبة الثالثة، أي الوصول إلى (4,3). المساران المؤديان إليها هما:<br>
+        (3,2) → (3,3) → (4,3) و (3,2) → (4,2) → (4,3).<br>
+        P(A)=2/5×3/6 + 3/5×2/6 = 1/5 + 1/5 = 2/5.<br><br>
+        الحادثة B: وجود خمس كرات بيضاء قبل السحبة الثالثة، أي الوصول إلى (5,2).<br>
+        P(B)=3/5×4/6=2/5.`,
+      },
+    ],
+  },  {
+    id: "literary-conditional",
+    branch: "literary",
+    title: "الدرس الثالث: الاحتمالات الشرطية",
+    summary: "تعريف الاحتمال الشرطي واستعماله في حساب احتمال تقاطع حادثتين وبناء شجرة احتمالات.",
+    tags: ["أدبي", "الدرس الثالث", "شرطي"],
+    lesson: `
+      <section class="definition-box">
+        <strong>تعريف:</strong>
+        <p>لتكن <span class="math">A</span> حادثة من مجموعة الممكنات بحيث <span class="math">P(A) ≠ 0</span>. نعرّف احتمال الحادثة <span class="math">B</span> علمًا أن <span class="math">A</span> محققة كما يلي:</p>
+        <div class="math-equation">P_A(B)=P(B/A)=P(A∩B)/P(A)</div>
+        <p>ومنه نحصل على قاعدة الضرب:</p>
+        <div class="math-equation">P(A∩B)=P(A)×P_A(B)</div>
+      </section>
+      <section class="lesson-block">
+        <h4>قراءة الاحتمال الشرطي</h4>
+        <p>الرمز <span class="math">P_A(B)</span> يعني: احتمال تحقق <span class="math">B</span> بعد أن نعلم أن <span class="math">A</span> قد تحققت.</p>
+        <p>في السحب دون إرجاع تتغير الاحتمالات بعد السحب الأول، لذلك نستعمل الاحتمال الشرطي.</p>
+      </section>
+      <section class="property-box">
+        <strong>شجرة احتمالات:</strong>
+        <p>في الشجرة نكتب على كل فرع احتمال الانتقال. احتمال المسار الكامل يساوي جداء احتمالات فروعه.</p>
+      </section>
+    `,
+    activities: [
+      {
+        title: "نشاط: صندوق كرات مرقمة",
+        body: "صندوق يحتوي 5 كرات حمراء مرقمة بالأرقام 0، 2، 4، 6، 8 و3 كرات خضراء مرقمة بالأرقام 1، 3، 5. نسحب كرتين على التوالي دون إرجاع.",
+        prompts: [
+          "لتكن A الحادثة: الكرة الأولى تحمل رقمًا زوجيًا. احسب P(A).",
+          "لتكن B الحادثة: الكرة الثانية تحمل رقمًا زوجيًا. احسب P_A(B).",
+          "استنتج P(A∩B).",
+        ],
+        solution: "كل الكرات الحمراء تحمل أعدادًا زوجية وعددها 5 من أصل 8، إذن P(A)=5/8. إذا تحققت A فقد سحبنا كرة زوجية، فيبقى 4 كرات زوجية من أصل 7 كرات، إذن P_A(B)=4/7. ومنه P(A∩B)=5/8×4/7=5/14.",
+      },
+      {
+        title: "نشاط: شجرة رمي قطعة نقدية",
+        body: "نرمي قطعة نقدية غير متوازنة مرتين. نرمز بـ F للحصول على وجه وبـ P للحصول على ظهر، وليكن احتمال الحصول على وجه في الرمية الأولى 1/2، وبعد ظهور وجه يصبح احتمال الوجه في الرمية الثانية 1/3، وبعد ظهور ظهر يصبح احتمال الوجه في الرمية الثانية 2/3.",
+        visual: `
+          <svg class="activity-visual" viewBox="0 0 620 260" role="img" aria-label="شجرة احتمالات">
+            <line x1="60" y1="130" x2="190" y2="70" stroke="#55a7ff" stroke-width="4"/>
+            <line x1="60" y1="130" x2="190" y2="190" stroke="#ff4d4d" stroke-width="4"/>
+            <text x="110" y="82" font-size="18">1/2</text><text x="110" y="188" font-size="18">1/2</text>
+            <text x="205" y="75" font-size="22">F</text><text x="205" y="195" font-size="22">P</text>
+            <line x1="230" y1="70" x2="390" y2="35" stroke="#55a7ff" stroke-width="4"/>
+            <line x1="230" y1="70" x2="390" y2="105" stroke="#ff4d4d" stroke-width="4"/>
+            <text x="300" y="40" font-size="18">1/3</text><text x="300" y="108" font-size="18">2/3</text>
+            <line x1="230" y1="190" x2="390" y2="155" stroke="#55a7ff" stroke-width="4"/>
+            <line x1="230" y1="190" x2="390" y2="225" stroke="#ff4d4d" stroke-width="4"/>
+            <text x="300" y="158" font-size="18">2/3</text><text x="300" y="228" font-size="18">1/3</text>
+            <text x="405" y="40" font-size="22">F</text><text x="405" y="110" font-size="22">P</text><text x="405" y="160" font-size="22">F</text><text x="405" y="230" font-size="22">P</text>
+          </svg>
+        `,
+        prompts: [
+          "أكمل الشجرة بكتابة الاحتمالات الناقصة.",
+          "احسب احتمال الحصول على وجه ثم ظهر.",
+          "احسب احتمال الحصول على وجهين.",
+        ],
+        solution: "احتمال المسار F ثم P هو P(F)×P_F(P)=1/2×2/3=1/3. واحتمال المسار F ثم F هو P(F)×P_F(F)=1/2×1/3=1/6.",
+      },
+    ],
+    exercises: [
+      {
+        title: "تمرين محلول: احتمال شرطي",
+        statement: "في صندوق 8 كرات: 5 كرات تحمل أرقامًا زوجية و3 كرات تحمل أرقامًا فردية. نسحب كرتين على التوالي دون إرجاع. لتكن A: الكرة الأولى زوجية، وB: الكرة الثانية زوجية. احسب P(A)، ثم P_A(B)، ثم P(A∩B).",
+        visual: `
+          <svg class="activity-visual" viewBox="0 0 620 260" role="img" aria-label="شجرة احتمال شرطي">
+            <line x1="60" y1="130" x2="220" y2="70" stroke="#55a7ff" stroke-width="4"/>
+            <line x1="60" y1="130" x2="220" y2="190" stroke="#ff4d4d" stroke-width="4"/>
+            <text x="130" y="76" font-size="18">5/8</text><text x="130" y="190" font-size="18">3/8</text>
+            <text x="238" y="76" font-size="22">A</text><text x="238" y="196" font-size="22">A̅</text>
+            <line x1="280" y1="70" x2="470" y2="35" stroke="#55a7ff" stroke-width="4"/>
+            <line x1="280" y1="70" x2="470" y2="105" stroke="#ff4d4d" stroke-width="4"/>
+            <text x="360" y="38" font-size="18">4/7</text><text x="360" y="108" font-size="18">3/7</text>
+            <line x1="280" y1="190" x2="470" y2="155" stroke="#55a7ff" stroke-width="4"/>
+            <line x1="280" y1="190" x2="470" y2="225" stroke="#ff4d4d" stroke-width="4"/>
+            <text x="360" y="158" font-size="18">5/7</text><text x="360" y="228" font-size="18">2/7</text>
+            <text x="488" y="42" font-size="22">B</text><text x="488" y="112" font-size="22">B̅</text><text x="488" y="162" font-size="22">B</text><text x="488" y="232" font-size="22">B̅</text>
+          </svg>
+        `,
+        solution: "لدينا P(A)=5/8. إذا تحققت A بقيت 7 كرات منها 4 زوجية، إذن P_A(B)=4/7. بالتالي P(A∩B)=P(A)×P_A(B)=5/8×4/7=20/56=5/14.",
+      },
+      {
+        title: "تمرين محلول 2: لجنة من تلاميذ",
+        statement: "في قسم 18 تلميذًا: 10 إناث و8 ذكور. من بين الإناث 6 يدرسن الإسبانية، ومن بين الذكور 3 يدرسون الإسبانية. نختار تلميذًا عشوائيًا. احسب احتمال أن يكون التلميذ يدرس الإسبانية، ثم احتمال أن يكون أنثى علمًا أنه يدرس الإسبانية.",
+        visual: `
+          <svg class="activity-visual" viewBox="0 0 660 285" role="img" aria-label="شجرة تلاميذ وإسبانية">
+            <line x1="70" y1="145" x2="235" y2="78" stroke="#55a7ff" stroke-width="4"/>
+            <line x1="70" y1="145" x2="235" y2="212" stroke="#ff4d4d" stroke-width="4"/>
+            <text x="145" y="78" font-size="18">10/18</text><text x="145" y="210" font-size="18">8/18</text>
+            <text x="252" y="84" font-size="22">F</text><text x="252" y="218" font-size="22">H</text>
+            <line x1="300" y1="78" x2="500" y2="45" stroke="#2ed47a" stroke-width="4"/>
+            <line x1="300" y1="78" x2="500" y2="112" stroke="#f2c94c" stroke-width="4"/>
+            <text x="385" y="45" font-size="18">6/10</text><text x="385" y="116" font-size="18">4/10</text>
+            <line x1="300" y1="212" x2="500" y2="178" stroke="#2ed47a" stroke-width="4"/>
+            <line x1="300" y1="212" x2="500" y2="246" stroke="#f2c94c" stroke-width="4"/>
+            <text x="385" y="178" font-size="18">3/8</text><text x="385" y="250" font-size="18">5/8</text>
+            <text x="520" y="50" font-size="22">E</text><text x="520" y="118" font-size="22">E̅</text>
+            <text x="520" y="183" font-size="22">E</text><text x="520" y="252" font-size="22">E̅</text>
+          </svg>
+        `,
+        solution: `نرمز بـ F للأنثى، وبـ H للذكر، وبـ E لحدث دراسة الإسبانية.<br>
+        P(E)=P(F)P_F(E)+P(H)P_H(E)=10/18×6/10 + 8/18×3/8 = 6/18 + 3/18 = 9/18 = 1/2.<br>
+        نريد احتمال أن يكون التلميذ أنثى علمًا أنه يدرس الإسبانية:<br>
+        P_E(F)=P(F∩E)/P(E) = (10/18×6/10)/(1/2) = (6/18)/(1/2)=2/3.`,
+      },
+      {
+        title: "تمرين محلول 3: اختبار طبي",
+        statement: "مرض يصيب 4% من السكان. إذا كان الشخص مريضًا فإن الاختبار يكون موجبًا بنسبة 90%، وإذا كان غير مريض فإن الاختبار يكون موجبًا خطأ بنسبة 5%. نختار شخصًا عشوائيًا. احسب احتمال أن يكون الاختبار موجبًا، ثم احتمال أن يكون الشخص مريضًا علمًا أن الاختبار موجب.",
+        visual: `
+          <svg class="activity-visual" viewBox="0 0 660 285" role="img" aria-label="شجرة اختبار طبي">
+            <line x1="70" y1="145" x2="235" y2="78" stroke="#ff4d4d" stroke-width="4"/>
+            <line x1="70" y1="145" x2="235" y2="212" stroke="#55a7ff" stroke-width="4"/>
+            <text x="145" y="78" font-size="18">0.04</text><text x="145" y="210" font-size="18">0.96</text>
+            <text x="252" y="84" font-size="22">M</text><text x="252" y="218" font-size="22">M̅</text>
+            <line x1="300" y1="78" x2="500" y2="45" stroke="#2ed47a" stroke-width="4"/>
+            <line x1="300" y1="78" x2="500" y2="112" stroke="#f2c94c" stroke-width="4"/>
+            <text x="385" y="45" font-size="18">0.90</text><text x="385" y="116" font-size="18">0.10</text>
+            <line x1="300" y1="212" x2="500" y2="178" stroke="#2ed47a" stroke-width="4"/>
+            <line x1="300" y1="212" x2="500" y2="246" stroke="#f2c94c" stroke-width="4"/>
+            <text x="385" y="178" font-size="18">0.05</text><text x="385" y="250" font-size="18">0.95</text>
+            <text x="520" y="50" font-size="22">T</text><text x="520" y="118" font-size="22">T̅</text>
+            <text x="520" y="183" font-size="22">T</text><text x="520" y="252" font-size="22">T̅</text>
+          </svg>
+        `,
+        solution: `نرمز بـ M لحدث أن الشخص مريض، وبـ T لحدث أن الاختبار موجب.<br>
+        P(T)=P(M)P_M(T)+P(M̅)P_M̅(T)=0.04×0.90+0.96×0.05=0.036+0.048=0.084.<br>
+        احتمال أن يكون الشخص مريضًا علمًا أن الاختبار موجب هو:<br>
+        P_T(M)=P(M∩T)/P(T)=0.036/0.084=3/7.`,
+      },    ],
+  },  {
+    id: "literary-independent",
+    branch: "literary",
+    title: "الدرس الرابع: الحوادث المستقلة",
+    summary: "تعريف استقلال حادثتين واستعماله في حساب التقاطع والاتحاد واحتمال نجاح عدة حوادث مستقلة.",
+    tags: ["أدبي", "الدرس الرابع", "استقلال"],
+    lesson: `
+      <section class="definition-box">
+        <strong>تعريف:</strong>
+        <p>نقول عن حادثتين <span class="math">A</span> و<span class="math">B</span> إنهما مستقلتان إذا وفقط إذا كان:</p>
+        <div class="math-equation">P(A∩B)=P(A)×P(B)</div>
+        <p>وإذا كان <span class="math">P(A) ≠ 0</span> فإن ذلك يكافئ:</p>
+        <div class="math-equation">P(B/A)=P(B)</div>
+      </section>
+      <section class="property-box">
+        <strong>نتيجة:</strong>
+        <p>الحادثتان المستقلتان هما حادثتان يكون وقوع إحداهما غير مؤثر في وقوع الأخرى.</p>
+      </section>
+      <section class="lesson-block">
+        <h4>أمثلة</h4>
+        <p>عند رمي قطعة نقدية مرتين متتاليتين، نتيجة الرمية الأولى لا تؤثر في نتيجة الرمية الثانية، لذلك الحادثتان مستقلتان.</p>
+        <p>عند رمي نرد ثم قطعة نقدية، نتيجة النرد لا تؤثر في نتيجة قطعة النقد.</p>
+      </section>
+    `,
+    activities: [
+      {
+        title: "نشاط: هل الحادثتان مستقلتان؟",
+        body: "نرمي قطعة نقدية ونرمي حجر نرد متوازن. لتكن A حادثة الحصول على وجه في قطعة النقد، وB حادثة الحصول على عدد زوجي في حجر النرد.",
+        prompts: [
+          "احسب P(A) و P(B).",
+          "احسب P(A∩B).",
+          "هل الحادثتان A وB مستقلتان؟ علّل إجابتك.",
+        ],
+        solution: "لدينا P(A)=1/2 و P(B)=3/6=1/2. وبما أن التجربتين منفصلتان فإن P(A∩B)=1/2×1/2=1/4. كما أن P(A)×P(B)=1/4، إذن A وB مستقلتان.",
+      },
+      {
+        title: "نشاط: شهادة البكالوريا ورخصة السياقة",
+        body: "قال الأستاذ لأحد التلاميذ إن الحصول على شهادة البكالوريا مستقل عن الحصول على رخصة السياقة. نرمز بـ L لحدث النجاح في شهادة البكالوريا وبـ M لحدث الحصول على رخصة السياقة، حيث P(L)=0.9 و P(M)=0.5.",
+        visual: `
+          <svg class="activity-visual" viewBox="0 0 620 250" role="img" aria-label="شجرة حوادث مستقلة">
+            <line x1="70" y1="125" x2="230" y2="70" stroke="#55a7ff" stroke-width="4"/>
+            <line x1="70" y1="125" x2="230" y2="180" stroke="#ff4d4d" stroke-width="4"/>
+            <text x="145" y="70" font-size="18">0.9</text><text x="145" y="178" font-size="18">0.1</text>
+            <text x="245" y="76" font-size="22">L</text><text x="245" y="186" font-size="22">L̅</text>
+            <line x1="300" y1="70" x2="470" y2="40" stroke="#2ed47a" stroke-width="4"/>
+            <line x1="300" y1="70" x2="470" y2="100" stroke="#f2c94c" stroke-width="4"/>
+            <line x1="300" y1="180" x2="470" y2="150" stroke="#2ed47a" stroke-width="4"/>
+            <line x1="300" y1="180" x2="470" y2="210" stroke="#f2c94c" stroke-width="4"/>
+            <text x="385" y="38" font-size="18">0.5</text><text x="385" y="104" font-size="18">0.5</text>
+            <text x="385" y="148" font-size="18">0.5</text><text x="385" y="214" font-size="18">0.5</text>
+            <text x="485" y="45" font-size="22">M</text><text x="485" y="105" font-size="22">M̅</text><text x="485" y="155" font-size="22">M</text><text x="485" y="215" font-size="22">M̅</text>
+          </svg>
+        `,
+        prompts: [
+          "احسب احتمال الحصول على رخصة السياقة والنجاح في البكالوريا معًا.",
+          "احسب احتمال الحصول على رخصة السياقة فقط أو النجاح في البكالوريا فقط.",
+          "إذا كان احتمال نجاح علي في البكالوريا 0.9 واحتمال نجاح محمد 0.9 واحتمال حصول كل واحد منهما على رخصة السياقة 0.5، احسب احتمال نجاحهما معًا وحصولهما على الرخصة معًا.",
+        ],
+        solution: "بما أن L وM مستقلتان فإن P(L∩M)=P(L)×P(M)=0.9×0.5=0.45. واحتمال تحقق حادثة واحدة فقط هو P(L∩M̅)+P(L̅∩M)=0.9×0.5+0.1×0.5=0.50. أما احتمال نجاح علي ومحمد معًا وحصولهما معًا على الرخصة فهو 0.9×0.9×0.5×0.5=0.2025.",
+      },
+    ],
+    exercises: [
+      {
+        title: "تمرين محلول 1: كيس فيه كرات بيضاء وحمراء",
+        statement: "يضم كيس أربع كريات بيضاء وثماني كريات حمراء. نسحب عشوائيًا كرتين على التوالي دون إرجاع. لتكن B1 حادثة: الكرة الأولى بيضاء، وB2 حادثة: الكرة الثانية بيضاء. هل الحادثتان B1 وB2 مستقلتان؟ ثم نعيد السؤال في حالة السحب على التوالي مع إرجاع.",
+        solution: `1. في السحب دون إرجاع:<br>
+        P(B1)=4/12=1/3، و P(B2)=4/12=1/3.<br>
+        P(B1∩B2)=4/12×3/11=1/11.<br>
+        وبما أن P(B1)×P(B2)=1/3×1/3=1/9، ولدينا 1/11 ≠ 1/9، فإن الحادثتين B1 وB2 غير مستقلتين.<br><br>
+        2. في السحب مع إرجاع:<br>
+        P(B1)=4/12=1/3، و P(B2)=4/12=1/3.<br>
+        P(B1∩B2)=4/12×4/12=1/9.<br>
+        وبما أن P(B1∩B2)=P(B1)×P(B2)، فإن الحادثتين B1 وB2 مستقلتان.`,
+      },
+      {
+        title: "تمرين محلول 2: ثلاث كرات دون إرجاع",
+        statement: "يضم كيس أربع كريات بيضاء وكرتين حمراوين. نسحب عشوائيًا ثلاث كرات على التوالي دون إرجاع. نعتبر الحادثتين: M الحصول على ألوان مختلفة، وN عدم سحب أي كرة حمراء. هل الحادثتان M وN مستقلتان عندما يكون عدد الكرات المسحوبة كرتين؟ وهل هما مستقلتان عندما يكون عدد الكرات المسحوبة ثلاث كرات؟",
+        solution: `نرمز للكرة البيضاء بـ B وللكرة الحمراء بـ R.<br><br>
+        1. عند سحب كرتين:<br>
+        مجموعة الممكنات المناسبة هي: E={(B,B),(B,R),(R,B),(R,R)}.<br>
+        الحادثة M: لونان مختلفان، إذن M={(B,R),(R,B)}.<br>
+        الحادثة N: لا توجد كرة حمراء، إذن N={(B,B)}.<br>
+        P(M)=2/4=1/2 و P(N)=1/4، ومنه P(M)×P(N)=1/8.<br>
+        كما أن M∩N=∅، إذن P(M∩N)=0. بما أن 0 ≠ 1/8 فإن M وN غير مستقلتين.<br><br>
+        2. عند سحب ثلاث كرات:<br>
+        نعد كل ترتيب ممكن للألوان عند السحب. الحادثة N تعني سحب ثلاث كرات بيضاء: (B,B,B). أما الحادثة M فتعني وجود اللونين معًا بين الكرات المسحوبة.<br>
+        لدينا M∩N=∅ لأن N تعني عدم وجود كرة حمراء، بينما M تتطلب وجود اللونين معًا.<br>
+        إذن P(M∩N)=0، بينما P(M)>0 و P(N)>0، ولذلك P(M)×P(N)>0. ومنه الحادثتان M وN غير مستقلتين.`,
+      },
+    ],
+  },  {
     id: "trees",
     branch: "literary",
     title: "الأشجار الاحتمالية للأدبي",
@@ -665,6 +1073,31 @@ const modules = [
       </section>
     `,
     activities: [
+      {
+        title: "النشاط الأول: رمي حجر نرد",
+        body: "نرمي حجر نرد متوازن رمية واحدة ونسجل الرقم على الوجه العلوي. ثم نرميه مرتين متتابعتين ونسجل في كل مرة مجموع الرقمين المحصل عليهما. ثم نرميه ثلاث رميات متتابعة ونسجل في كل مرة مجموع الأرقام المحصل عليها.",
+        visual: `
+          <svg class="activity-visual" viewBox="0 0 360 180" role="img" aria-label="حجر نرد">
+            <rect x="52" y="34" width="128" height="128" rx="8" fill="#f3f000" stroke="#d6d200" stroke-width="4"/>
+            <polygon points="180,34 226,12 226,140 180,162" fill="#d5d300"/>
+            <polygon points="52,34 98,12 226,12 180,34" fill="#fbff13"/>
+            <circle cx="88" cy="72" r="17" fill="#f31316"/>
+            <circle cx="142" cy="72" r="17" fill="#f31316"/>
+            <circle cx="88" cy="124" r="17" fill="#f31316"/>
+            <circle cx="142" cy="124" r="17" fill="#f31316"/>
+            <circle cx="116" cy="98" r="17" fill="#f31316"/>
+            <circle cx="206" cy="88" r="15" fill="#f31316"/>
+            <text x="260" y="78" text-anchor="middle" font-size="28" fill="#ffffff">نرد</text>
+            <text x="260" y="116" text-anchor="middle" font-size="18" fill="#bfe7f4">1 إلى 6</text>
+          </svg>
+        `,
+        prompts: [
+          "ما هي القيم التي يمكن الحصول عليها في رمية واحدة؟",
+          "عند رمي النرد مرتين متتابعتين وتسجيل مجموع الرقمين، ما هي القيم الناتجة؟",
+          "عند رمي النرد ثلاث رميات متتابعة وتسجيل مجموع الأرقام، ما هي القيم الناتجة؟",
+        ],
+        solution: "في رمية واحدة القيم الممكنة هي: {1,2,3,4,5,6}.<br>في رميتين، أصغر مجموع هو 1+1=2 وأكبر مجموع هو 6+6=12، إذن القيم الممكنة هي: {2,3,4,5,6,7,8,9,10,11,12}.<br>في ثلاث رميات، أصغر مجموع هو 1+1+1=3 وأكبر مجموع هو 6+6+6=18، إذن القيم الممكنة هي: {3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18}.",
+      },
       {
         title: "نشاط: سحب كرتين دون إرجاع",
         body: "كيس فيه 3 كرات بيضاء و2 سوداء. نسحب كرتين دون إرجاع.",
@@ -6279,6 +6712,11 @@ function renderModules() {
         <div class="badge-row">${branchBadge(module)}${module.tags.map((tag) => `<span class="badge">${tag}</span>`).join("")}</div>
         <h3>${module.title}</h3>
         <p>${module.summary}</p>
+        <div class="lesson-parts" aria-label="محتوى الدرس">
+          <span>الدرس</span>
+          <span>أنشطة</span>
+          <span>تمرين محلول</span>
+        </div>
         <button class="${done ? "ghost-btn" : "primary-btn"}" type="button" data-open-module="${module.id}">${done ? "مراجعة" : "فتح الدرس"}</button>
       </article>
     `;
@@ -6297,10 +6735,10 @@ function renderModuleDetail() {
       </div>
       <button class="${done ? "ghost-btn" : "primary-btn"}" type="button" data-complete-module="${module.id}" ${done ? "disabled" : ""}>${done ? "مكتمل" : "تعليم كمكتمل"}</button>
     </section>
-    <nav class="tabs" aria-label="أقسام المحور">
+    <nav class="tabs" aria-label="أقسام الدرس">
+      <button class="tab-btn ${state.moduleTab === "lesson" ? "active" : ""}" type="button" data-module-tab="lesson">الدرس</button>
       <button class="tab-btn ${state.moduleTab === "activities" ? "active" : ""}" type="button" data-module-tab="activities">أنشطة (${module.activities.length})</button>
-      <button class="tab-btn ${state.moduleTab === "lesson" ? "active" : ""}" type="button" data-module-tab="lesson">درس</button>
-      <button class="tab-btn ${state.moduleTab === "exercises" ? "active" : ""}" type="button" data-module-tab="exercises">تمارين محلولة (${module.exercises.length})</button>
+      <button class="tab-btn ${state.moduleTab === "exercises" ? "active" : ""}" type="button" data-module-tab="exercises">تمرين محلول (${module.exercises.length})</button>
     </nav>
     <section class="reader">
       ${state.moduleTab === "lesson" ? module.lesson : ""}
@@ -6336,6 +6774,7 @@ function renderExerciseCard(exercise, key) {
       <span class="label">${exercise.moduleTitle || "تمرين"}</span>
       <h3>${exercise.title}</h3>
       <p>${exercise.statement}</p>
+      ${exercise.visual || ""}
       <button class="solution-toggle" type="button" data-solution="${key}">${open ? "إخفاء الحل" : "إظهار الحل"}</button>
       <div class="solution-panel ${open ? "open" : ""}" id="solution-${key}">${exercise.solution}</div>
     </article>
@@ -6344,7 +6783,69 @@ function renderExerciseCard(exercise, key) {
 
 function renderPractice() {
   if (state.branch === "literary") {
-    const exercises = moduleExercises();
+    const exercises = [
+      {
+        key: "literary-practice-sum-dice",
+        title: "أمل مجموع رميتين",
+        statement: "نرمي حجر نرد متوازن مرتين متتاليتين، أوجهه مرقمة من 1 إلى 4. ليكن X المتغير العشوائي الذي يرفق بكل نتيجة مجموع الرقمين الظاهرين. احسب أمله الرياضي.",
+        solution: `القيم الممكنة لـ X هي: 2، 3، 4، 5، 6، 7، 8. وعدد الحالات الكلي هو 4×4=16.<br>
+        <table class="theory-table">
+          <thead><tr><th>xᵢ</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th></tr></thead>
+          <tbody><tr><th>pᵢ</th><td>1/16</td><td>2/16</td><td>3/16</td><td>4/16</td><td>3/16</td><td>2/16</td><td>1/16</td></tr></tbody>
+        </table>
+        E(X)=2×1/16+3×2/16+4×3/16+5×4/16+6×3/16+7×2/16+8×1/16 = 80/16 = 5.<br>
+        إذن الأمل الرياضي للمتغير X هو 5.`,
+      },
+      {
+        key: "literary-practice-numbered-tokens",
+        title: "قريصات مرقمة وملونة",
+        statement: "يضم كيس 10 قريصات مرقمة من 0 إلى 9، منها 3 قريصات بيضاء والبقية سوداء. نسحب قريصة ونسجل رقمها ولونها. احسب احتمال الحصول على قريصة تحمل رقمًا فرديًا، ثم احتمال الحصول على قريصة بيضاء. ثم نسحب قريصتين على التوالي دون إرجاع: احسب احتمال الحصول على رقمين فرديين، واحتمال الحصول على قريصتين من نفس اللون. ليكن X عدد القريصات البيضاء المسحوبة، عرّف قانون احتمال X واحسب أمله الرياضي.",
+        solution: `الأرقام الفردية من 0 إلى 9 هي: 1، 3، 5، 7، 9، وعددها 5، إذن احتمال الحصول على رقم فردي هو 5/10=1/2.<br>
+        عدد القريصات البيضاء 3 من أصل 10، إذن احتمال الحصول على قريصة بيضاء هو 3/10.<br><br>
+        عند سحب قريصتين دون إرجاع:<br>
+        احتمال الحصول على رقمين فرديين هو 5/10×4/9=2/9.<br>
+        احتمال الحصول على قريصتين من نفس اللون هو: [C_3^2 + C_7^2] / C_10^2 = (3+21)/45 = 8/15.<br><br>
+        قيم المتغير X هي 0 و1 و2.<br>
+        <table class="theory-table">
+          <thead><tr><th>xᵢ</th><th>0</th><th>1</th><th>2</th></tr></thead>
+          <tbody><tr><th>P(X=xᵢ)</th><td>7/15</td><td>7/15</td><td>1/15</td></tr></tbody>
+        </table>
+        لأن P(X=0)=C_7^2/C_10^2=21/45=7/15، و P(X=1)=C_3^1C_7^1/C_10^2=21/45=7/15، و P(X=2)=C_3^2/C_10^2=3/45=1/15.<br>
+        E(X)=0×7/15+1×7/15+2×1/15=9/15=3/5.`,
+      },
+      {
+        key: "literary-practice-coin-three-times",
+        title: "رمي قطعة نقد ثلاث مرات",
+        statement: "نرمي قطعة نقد ثلاث مرات متتابعة. حدّد مجموعة المخارج، كوّن الشجرة المناسبة، ثم احسب احتمال أن يظهر الوجه في الرمية الثالثة.",
+        visual: `
+          <svg class="activity-visual" viewBox="0 0 720 330" role="img" aria-label="شجرة رمي قطعة نقد ثلاث مرات">
+            <line x1="45" y1="165" x2="150" y2="95" stroke="#55a7ff" stroke-width="4"/>
+            <line x1="45" y1="165" x2="150" y2="235" stroke="#ff4d4d" stroke-width="4"/>
+            <text x="92" y="95" font-size="16">1/2</text><text x="92" y="235" font-size="16">1/2</text>
+            <text x="165" y="100" font-size="20">F</text><text x="165" y="240" font-size="20">P</text>
+            <line x1="195" y1="95" x2="310" y2="55" stroke="#55a7ff" stroke-width="4"/>
+            <line x1="195" y1="95" x2="310" y2="135" stroke="#ff4d4d" stroke-width="4"/>
+            <line x1="195" y1="235" x2="310" y2="195" stroke="#55a7ff" stroke-width="4"/>
+            <line x1="195" y1="235" x2="310" y2="275" stroke="#ff4d4d" stroke-width="4"/>
+            <text x="325" y="60" font-size="20">F</text><text x="325" y="140" font-size="20">P</text><text x="325" y="200" font-size="20">F</text><text x="325" y="280" font-size="20">P</text>
+            <line x1="365" y1="55" x2="520" y2="35" stroke="#55a7ff" stroke-width="4"/>
+            <line x1="365" y1="55" x2="520" y2="75" stroke="#ff4d4d" stroke-width="4"/>
+            <line x1="365" y1="135" x2="520" y2="115" stroke="#55a7ff" stroke-width="4"/>
+            <line x1="365" y1="135" x2="520" y2="155" stroke="#ff4d4d" stroke-width="4"/>
+            <line x1="365" y1="195" x2="520" y2="175" stroke="#55a7ff" stroke-width="4"/>
+            <line x1="365" y1="195" x2="520" y2="215" stroke="#ff4d4d" stroke-width="4"/>
+            <line x1="365" y1="275" x2="520" y2="255" stroke="#55a7ff" stroke-width="4"/>
+            <line x1="365" y1="275" x2="520" y2="295" stroke="#ff4d4d" stroke-width="4"/>
+            <text x="540" y="40" font-size="18">F</text><text x="540" y="80" font-size="18">P</text><text x="540" y="120" font-size="18">F</text><text x="540" y="160" font-size="18">P</text>
+            <text x="540" y="180" font-size="18">F</text><text x="540" y="220" font-size="18">P</text><text x="540" y="260" font-size="18">F</text><text x="540" y="300" font-size="18">P</text>
+          </svg>
+        `,
+        solution: `نرمز للوجه بـ F وللظهر بـ P. مجموعة المخارج هي:<br>
+        E={FFF, FFP, FPF, FPP, PFF, PFP, PPF, PPP}.<br>
+        عدد المخارج 2^3=8 وكلها متساوية الاحتمال.<br>
+        ظهور الوجه في الرمية الثالثة يتحقق في المخارج: FFF، FPF، PFF، PPF، وعددها 4.<br>
+        إذن الاحتمال هو 4/8=1/2.`,
+      },    ];
     document.getElementById("practiceGrid").innerHTML = exercises.length ? exercises.map((exercise, index) => {
       const isOpen = state.openSolutions[exercise.key];
       return `

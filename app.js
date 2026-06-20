@@ -5009,6 +5009,140 @@ P(H∩S̄)=120/500
 P(H/S̄)=120/200=3/5
 
 <p class="property-box"><strong>النتيجة:</strong> الاحتمال هو 3/5.</p>`
+  },
+  {
+    id: 43,
+    track: "management",
+    year: 2016,
+    topic: "الموضوع الثاني",
+    text: `التمرين الأول: (04 نقاط)
+
+وكالة أسفار تقترح على زبائنها ثلاث وجهات A وB وC.
+20% من الزبائن اختاروا الوجهة A، و50% اختاروا الوجهة B، والباقي اختار الوجهة C.
+
+عند العودة من السفر أجرت الوكالة استجوابا لزبائنها حول مدى إعجابهم بالوجهة، واستنتجت ما يلي:
+50% من أصحاب الوجهة A كانوا معجبين بها.
+30% من أصحاب الوجهة B كانوا غير معجبين بها.
+80% من أصحاب الوجهة C كانوا معجبين بها.
+
+نختار عشوائيا أحد الزبائن ونسجل الحادثتين التاليتين:
+S: "الزبون معجب بالوجهة المختارة"
+S̄: "الزبون غير معجب بالوجهة المختارة"
+
+1) انقل شجرة الاحتمالات المقابلة ثم أكمل القيم الناقصة.
+2) أ) احسب احتمالات الحوادث الآتية: A∩S̄ ، B∩S̄ ، C∩S.
+   ب) استنتج احتمال أن يكون الزبون معجبا بالوجهة المختارة.
+3) استجوبنا زبونا غير معجب بالوجهة المختارة، ما احتمال أن يكون من أصحاب الوجهة B؟`,
+    diagram: `
+      <svg class="bac-tree" viewBox="0 0 700 430" role="img" aria-label="شجرة احتمالات ناقصة لبكالوريا 2016 تسيير واقتصاد الموضوع الثاني">
+        <defs>
+          <marker id="bacTreeArrow2016ManagementTopic2" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+            <path d="M0,0 L8,4 L0,8 Z"></path>
+          </marker>
+        </defs>
+        <line x1="45" y1="215" x2="215" y2="85" marker-end="url(#bacTreeArrow2016ManagementTopic2)"></line>
+        <line x1="45" y1="215" x2="215" y2="215" marker-end="url(#bacTreeArrow2016ManagementTopic2)"></line>
+        <line x1="45" y1="215" x2="215" y2="345" marker-end="url(#bacTreeArrow2016ManagementTopic2)"></line>
+        <line x1="240" y1="85" x2="455" y2="55" marker-end="url(#bacTreeArrow2016ManagementTopic2)"></line>
+        <line x1="240" y1="85" x2="455" y2="115" marker-end="url(#bacTreeArrow2016ManagementTopic2)"></line>
+        <line x1="240" y1="215" x2="455" y2="185" marker-end="url(#bacTreeArrow2016ManagementTopic2)"></line>
+        <line x1="240" y1="215" x2="455" y2="245" marker-end="url(#bacTreeArrow2016ManagementTopic2)"></line>
+        <line x1="240" y1="345" x2="455" y2="315" marker-end="url(#bacTreeArrow2016ManagementTopic2)"></line>
+        <line x1="240" y1="345" x2="455" y2="375" marker-end="url(#bacTreeArrow2016ManagementTopic2)"></line>
+        <text x="112" y="118">0.2</text>
+        <text x="112" y="205">0.5</text>
+        <text x="112" y="328">----</text>
+        <text x="318" y="58">0.5</text>
+        <text x="318" y="122">----</text>
+        <text x="318" y="188">----</text>
+        <text x="318" y="252">0.3</text>
+        <text x="318" y="318">0.8</text>
+        <text x="318" y="382">----</text>
+        <text x="228" y="78">A</text>
+        <text x="228" y="228">B</text>
+        <text x="228" y="358">C</text>
+        <text x="472" y="59">S</text>
+        <text x="472" y="119">S̄</text>
+        <text x="472" y="189">S</text>
+        <text x="472" y="249">S̄</text>
+        <text x="472" y="319">S</text>
+        <text x="472" y="379">S̄</text>
+      </svg>
+    `,
+    solution: `<div class="definition-box"><strong>المعطيات:</strong> P(A)=0.2، P(B)=0.5، إذن P(C)=0.3. كما أن P(S/A)=0.5، P(S̄/B)=0.3، P(S/C)=0.8.</div>
+
+1) الشجرة المكتملة:
+
+<svg class="bac-tree" viewBox="0 0 700 430" role="img" aria-label="الشجرة المكتملة لبكالوريا 2016 تسيير واقتصاد الموضوع الثاني">
+  <defs>
+    <marker id="bacTreeArrow2016ManagementTopic2Solved" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z"></path>
+    </marker>
+  </defs>
+  <line x1="45" y1="215" x2="215" y2="85" marker-end="url(#bacTreeArrow2016ManagementTopic2Solved)"></line>
+  <line x1="45" y1="215" x2="215" y2="215" marker-end="url(#bacTreeArrow2016ManagementTopic2Solved)"></line>
+  <line x1="45" y1="215" x2="215" y2="345" marker-end="url(#bacTreeArrow2016ManagementTopic2Solved)"></line>
+  <line x1="240" y1="85" x2="455" y2="55" marker-end="url(#bacTreeArrow2016ManagementTopic2Solved)"></line>
+  <line x1="240" y1="85" x2="455" y2="115" marker-end="url(#bacTreeArrow2016ManagementTopic2Solved)"></line>
+  <line x1="240" y1="215" x2="455" y2="185" marker-end="url(#bacTreeArrow2016ManagementTopic2Solved)"></line>
+  <line x1="240" y1="215" x2="455" y2="245" marker-end="url(#bacTreeArrow2016ManagementTopic2Solved)"></line>
+  <line x1="240" y1="345" x2="455" y2="315" marker-end="url(#bacTreeArrow2016ManagementTopic2Solved)"></line>
+  <line x1="240" y1="345" x2="455" y2="375" marker-end="url(#bacTreeArrow2016ManagementTopic2Solved)"></line>
+  <text x="112" y="118">0.2</text>
+  <text x="112" y="205">0.5</text>
+  <text x="112" y="328">0.3</text>
+  <text x="318" y="58">0.5</text>
+  <text x="318" y="122">0.5</text>
+  <text x="318" y="188">0.7</text>
+  <text x="318" y="252">0.3</text>
+  <text x="318" y="318">0.8</text>
+  <text x="318" y="382">0.2</text>
+  <text x="228" y="78">A</text>
+  <text x="228" y="228">B</text>
+  <text x="228" y="358">C</text>
+  <text x="472" y="59">S</text>
+  <text x="472" y="119">S̄</text>
+  <text x="472" y="189">S</text>
+  <text x="472" y="249">S̄</text>
+  <text x="472" y="319">S</text>
+  <text x="472" y="379">S̄</text>
+</svg>
+
+2) أ) حساب الاحتمالات:
+
+P(A∩S̄)=P(A)×P(S̄/A)
+=0.2×0.5
+=0.10
+
+P(B∩S̄)=P(B)×P(S̄/B)
+=0.5×0.3
+=0.15
+
+P(C∩S)=P(C)×P(S/C)
+=0.3×0.8
+=0.24
+
+<p class="property-box"><strong>النتائج:</strong> P(A∩S̄)=0.10، P(B∩S̄)=0.15، P(C∩S)=0.24.</p>
+
+ب) احتمال أن يكون الزبون معجبا بالوجهة المختارة:
+
+P(S)=P(A∩S)+P(B∩S)+P(C∩S)
+=0.2×0.5 + 0.5×0.7 + 0.3×0.8
+=0.10+0.35+0.24
+=0.69
+
+<p class="property-box"><strong>النتيجة:</strong> P(S)=0.69.</p>
+
+3) احتمال أن يكون الزبون من أصحاب الوجهة B علما أنه غير معجب:
+
+نحسب أولا P(S̄):
+P(S̄)=1-P(S)=1-0.69=0.31
+
+P(B/S̄)=P(B∩S̄)/P(S̄)
+=0.15/0.31
+=15/31
+
+<p class="property-box"><strong>النتيجة:</strong> P(B/S̄)=15/31≈0.484.</p>`
   }
 ];
 

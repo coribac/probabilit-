@@ -27,8 +27,8 @@ const bacTrackLabels = {
 };
 
 const bacTracksByBranch = {
-  science: ["experimental", "math", "technical"],
-  literary: ["management"],
+  science: ["experimental", "math", "technical", "management"],
+  literary: [],
 };
 
 function bacTracksForBranch(branch = state.branch) {
@@ -7422,13 +7422,11 @@ function renderBac() {
     ? branchExercises
     : branchExercises.filter((ex) => ex.track === state.bacTrackFilter);
   const visibleTrackLabels = [
-    ["all", state.branch === "literary" ? "كل مواضيع الأدبي" : "كل الشعب العلمية"],
+    ["all", "كل الشعب"],
     ...allowedTracks.map((track) => [track, bacTrackLabels[track]]),
   ];
-  const bacIntroTitle = state.branch === "literary" ? "بكالوريا الشعب الأدبية" : "بكالوريا الشعب العلمية";
-  const bacIntroText = state.branch === "literary"
-    ? "مسار أدبي هادئ يركز على مواضيع التسيير والاقتصاد، دون عرض شعب العلوم التجريبية أو الرياضيات أو التقني الرياضي."
-    : "مواضيع العلوم التجريبية والرياضيات والتقني الرياضي مرتبة من الأحدث إلى الأقدم.";
+  const bacIntroTitle = "بكالوريا جزائرية";
+  const bacIntroText = "مواضيع وتمارين حسب الشعب"; 
   const years = ["الكل", ...new Set(trackFiltered.map((ex) => ex.year))].sort((a, b) => {
     if (a === "الكل") return -1;
     if (b === "الكل") return 1;

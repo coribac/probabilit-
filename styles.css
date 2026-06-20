@@ -690,6 +690,32 @@ h1, h2, h3, h4, p { margin-top: 0; }
   gap: 18px;
 }
 
+.bac-branch-panel {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 16px 18px;
+  background: rgba(255,255,255,.035);
+}
+
+.bac-branch-panel h3 {
+  margin: 6px 0 8px;
+  font-size: 22px;
+}
+
+.bac-branch-panel p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.bac-branch-panel.literary {
+  background: linear-gradient(135deg, rgba(247,183,51,.12), rgba(24,214,163,.05));
+  border-color: rgba(247,183,51,.28);
+}
+
+.bac-branch-panel.literary .kicker {
+  color: #ffe0a3;
+}
 .bac-filter-bar {
   display: flex;
   flex-wrap: wrap;

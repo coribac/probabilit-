@@ -905,7 +905,58 @@ E(X) = 3×(10/66) + 4×(35/66) + 5×(21/66)
     year: 2020,
     topic: "الموضوع الثاني",
     text: `كيس به 3 كريات بيضاء و كريتين حمراوين لا نميز بينها عند اللمس ، نسحب عشوائيا كريتين على التوالي من الكيس بالكيفية التالية :\nإذا كانت الكرية المسحوبة بيضاء نعيدها الى الكيس واذا كانت حمراء لا نعيدها الى الكيس.\n1) أ) شكل شجرة الاحتمالات (B: بيضاء، R: حمراء).\nب) احسب احتمال ان تكون الكرة المسحوبة الثانية حمراء.\n2) ليكن X المتغير العشوائي الذي يرفق بكل سحب لكرتين عدد الكريات الحمراء المسحوبة.\nأ) عين مجموعة قيم المتغير العشوائي X.\nب) برر أن P(X=1) = 27/50 ثم عرف قانون احتمال المتغير العشوائي X.\nج) أحسب E(X) الأمل الرياضياتي.`,
-    solution: `<div class="definition-box"><strong>البيانات:</strong> 3 كريات بيضاء و2 حمراء. نسحب كريتين على التوالي؛ إذا ظهرت بيضاء نعيدها، وإذا ظهرت حمراء لا نعيدها.</div>
+    diagram: `
+      <svg class="bac-tree" viewBox="0 0 620 330" role="img" aria-label="شجرة احتمالات ناقصة لبكالوريا 2020 علوم تجريبية الموضوع الثاني">
+        <defs>
+          <marker id="bacTreeArrow2020ExperimentalTopic2" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+            <path d="M0,0 L8,4 L0,8 Z"></path>
+          </marker>
+        </defs>
+        <line x1="45" y1="165" x2="215" y2="90" marker-end="url(#bacTreeArrow2020ExperimentalTopic2)"></line>
+        <line x1="45" y1="165" x2="215" y2="240" marker-end="url(#bacTreeArrow2020ExperimentalTopic2)"></line>
+        <line x1="240" y1="90" x2="445" y2="55" marker-end="url(#bacTreeArrow2020ExperimentalTopic2)"></line>
+        <line x1="240" y1="90" x2="445" y2="125" marker-end="url(#bacTreeArrow2020ExperimentalTopic2)"></line>
+        <line x1="240" y1="240" x2="445" y2="205" marker-end="url(#bacTreeArrow2020ExperimentalTopic2)"></line>
+        <line x1="240" y1="240" x2="445" y2="275" marker-end="url(#bacTreeArrow2020ExperimentalTopic2)"></line>
+        <text x="118" y="103">----</text>
+        <text x="118" y="235">----</text>
+        <text x="320" y="58">----</text>
+        <text x="320" y="130">2/5</text>
+        <text x="320" y="208">3/4</text>
+        <text x="320" y="280">----</text>
+        <text x="228" y="84">B</text>
+        <text x="228" y="255">R</text>
+        <text x="462" y="59">B</text>
+        <text x="462" y="129">R</text>
+        <text x="462" y="209">B</text>
+        <text x="462" y="279">R</text>
+      </svg>
+    `,    solution: `<div class="definition-box"><strong>البيانات:</strong> 3 كريات بيضاء و2 حمراء. نسحب كريتين على التوالي؛ إذا ظهرت بيضاء نعيدها، وإذا ظهرت حمراء لا نعيدها.</div>
+<svg class="bac-tree" viewBox="0 0 620 330" role="img" aria-label="الشجرة المكتملة لبكالوريا 2020 علوم تجريبية الموضوع الثاني">
+  <defs>
+    <marker id="bacTreeArrow2020ExperimentalTopic2Solved" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z"></path>
+    </marker>
+  </defs>
+  <line x1="45" y1="165" x2="215" y2="90" marker-end="url(#bacTreeArrow2020ExperimentalTopic2Solved)"></line>
+  <line x1="45" y1="165" x2="215" y2="240" marker-end="url(#bacTreeArrow2020ExperimentalTopic2Solved)"></line>
+  <line x1="240" y1="90" x2="445" y2="55" marker-end="url(#bacTreeArrow2020ExperimentalTopic2Solved)"></line>
+  <line x1="240" y1="90" x2="445" y2="125" marker-end="url(#bacTreeArrow2020ExperimentalTopic2Solved)"></line>
+  <line x1="240" y1="240" x2="445" y2="205" marker-end="url(#bacTreeArrow2020ExperimentalTopic2Solved)"></line>
+  <line x1="240" y1="240" x2="445" y2="275" marker-end="url(#bacTreeArrow2020ExperimentalTopic2Solved)"></line>
+  <text x="118" y="103">3/5</text>
+  <text x="118" y="235">2/5</text>
+  <text x="320" y="58">3/5</text>
+  <text x="320" y="130">2/5</text>
+  <text x="320" y="208">3/4</text>
+  <text x="320" y="280">1/4</text>
+  <text x="228" y="84">B</text>
+  <text x="228" y="255">R</text>
+  <text x="462" y="59">B</text>
+  <text x="462" y="129">R</text>
+  <text x="462" y="209">B</text>
+  <text x="462" y="279">R</text>
+</svg>
 
 1) أ) مسارات الشجرة:
 • السحبة الأولى:
@@ -1003,56 +1054,115 @@ E(X) = 0×(1/10) + 1×(3/5) + 2×(3/10)
     track: "experimental",
     year: 2024,
     topic: "الموضوع الأول",
-    text: `يحوي كيس 11 كريات متماثلة لا نفرق بينها في اللمس، موزعة كما يلي:\nكريتان بيضاوان مرقمتان بـ : 1 ، 3. \nوأربع كريات حمراء مرقمة بـ : 0 ، 1 ، 1 ، 3. \nوخمس كريات خضراء مرقمة بـ : 0 ، 1 ، 1 ، 3 ، 4.\n1) نسحب عشوائيا وفي أن واحد 3 كريات ونعتبر الحوادث الآتية:\nA: « الحصول على ثلاث كريات من نفس اللون »\nB: « الحصول على ثلاث كريات جداء أرقامها عدد فردي »\nC: « الحصول على ثلاث كريات جداء أرقامها عدد زوجي »\nأ) أحسب P(A)، وبين أن P(B) = 56/165 ثم استنتج P(C).\nب) أحسب الاحتمال الشرطي P_A(B).\n2) X المتغير العشوائي الذي يرفق بكل عملية سحب لثلاث كريات عدد الكريات التي تحمل رقماً زوجياً.\nأ) عرف قانون الاحتمال لـ X ، ثم أحسب أمله الرياضي E(X).`,
-    solution: `<div class="definition-box"><strong>البيانات:</strong> 11 كرة (2 بيضاء: 1,3؛ 4 حمراء: 0,1,1,3؛ 5 خضراء: 0,1,1,3,4). نسحب 3 كرات في آن واحد؛ C(11,3)=165.</div>
+    text: `التمرين الأول: (04 نقاط)
 
-1) أ) الحساب والتبيان:
-• الحالات الكلية: C(11,3)=165
-• الحادثة A (ثلاث كرات من نفس اللون):
-  P(A) = (C(4,3)+C(5,3)) / 165 = (4+10)/165 = 14/165
-• الحادثة B (جداء الأرقام فردي):
-  الجداء فردي يعني أن جميع الأرقام فردية (لا يوجد الرقم 0 الزوجي).
-  الأعداد الفردية هي 1 و3؛ عدد الكرات الفردية = 2+3+3=8.
-  P(B) = C(8,3)/165 = 56/165
+يحتوي كيس على 11 كرية متماثلة لا نفرق بينها باللمس موزعة كما يلي:
+كريتان بيضاوان مرقمتان بـ: 1، 3.
+وأربع كريات حمراء مرقمة بـ: 0، 1، 1، 3.
+وخمس كريات خضراء مرقمة بـ: 0، 1، 1، 3، 4.
 
-<p class="property-box"><strong>تبيان:</strong> P(B)=56/165 ✓</p>
+I) نسحب عشوائيا وفي آن واحد 3 كريات من الكيس ونعتبر الحوادث الآتية:
+A: "الحصول على 3 كريات من نفس اللون"
+B: "الحصول على 3 كريات جداء أرقامها عدد فردي"
+C: "الحصول على 3 كريات جداء أرقامها عدد زوجي"
 
-• الحادثة C (جداء الأرقام زوجي):
-  C هي متممة B، إذن:
-  P(C) = 1 - P(B) = 1 - 56/165 = 109/165
+1) أ) احسب احتمال الحادثة A وبين أن P(B)=56/165 ثم استنتج P(C).
+ب) احسب الاحتمال الشرطي P_A(B).
 
-<p class="property-box"><strong>تدقيق:</strong> P(B)+P(C)=56/165+109/165=165/165=1 ✓</p>
+2) X المتغير العشوائي الذي يرفق بكل عملية سحب لثلاث كريات عدد الكريات التي تحمل رقما زوجيا.
+أ) عين قانون الاحتمال للمتغير العشوائي X ثم احسب أمله الرياضي E(X).
+ب) احسب احتمال الحادثة (X>1).
+
+II) نسحب الآن من الكيس عشوائيا 3 كريات على التوالي ودون إرجاع.
+احسب احتمال الحادثة D: "الحصول على 3 كريات جداء أرقامها معدوم".`,
+    solution: `<div class="definition-box"><strong>البيانات:</strong> 11 كرية: 2 بيضاء (1،3)، 4 حمراء (0،1،1،3)، 5 خضراء (0،1،1،3،4). عند سحب 3 كريات في آن واحد يكون عدد الحالات الكلية C(11,3)=165.</div>
+
+I) 1) أ) حساب P(A) و P(B) و P(C):
+
+الحادثة A: الحصول على 3 كريات من نفس اللون.
+لا يمكن أخذ 3 بيضاء لأن عدد البيضاء 2 فقط.
+
+P(A)=[C(4,3)+C(5,3)]/C(11,3)
+=(4+10)/165
+=14/165
+
+الحادثة B: جداء الأرقام فردي.
+حتى يكون الجداء فرديا يجب أن تكون الأرقام الثلاثة كلها فردية.
+عدد الكريات ذات الأرقام الفردية هو 8:
+البيضاء 2، الحمراء 3، الخضراء 3.
+
+P(B)=C(8,3)/C(11,3)
+=56/165
+
+<p class="property-box"><strong>تبيان:</strong> P(B)=56/165.</p>
+
+الحادثة C: جداء الأرقام زوجي، وهي متممة B.
+
+P(C)=1-P(B)
+=1-56/165
+=109/165
+
+<p class="property-box"><strong>النتائج:</strong> P(A)=14/165 و P(C)=109/165.</p>
 
 ب) حساب P_A(B):
-A∩B يعني 3 كرات من نفس اللون وجميعها فردية.
-• الحمراء الفردية: 3 كرات (1,1,3) → C(3,3)=1 حالة.
-• الخضراء الفردية: 3 كرات (1,1,3) → C(3,3)=1 حالة.
-• البيضاء الفردية: كرتان فقط، لا يمكن اختيار 3.
 
-P(A∩B) = (1+1)/165 = 2/165
-P_A(B) = P(A∩B) / P(A) = (2/165) / (14/165) = 1/7
+A∩B يعني: 3 كريات من نفس اللون وجداء أرقامها فردي.
+
+• الحمراء الفردية: 1،1،3، إذن C(3,3)=1.
+• الخضراء الفردية: 1،1،3، إذن C(3,3)=1.
+• البيضاء الفردية كريتان فقط، فلا تكفي لاختيار 3.
+
+P(A∩B)=2/165
+
+P_A(B)=P(A∩B)/P(A)
+=(2/165)/(14/165)
+=1/7
 
 <p class="property-box"><strong>النتيجة:</strong> P_A(B)=1/7.</p>
 
-2) المتغير العشوائي X (عدد الكرات التي تحمل رقماً زوجياً):
-الأعداد الزوجية هي 0 و4. عدد الكرات الزوجية = 1 (حمراء 0) + 2 (خضراء 0 و4) = 3.
-عدد الكرات الفردية = 8.
+I) 2) المتغير العشوائي X:
+الأرقام الزوجية الموجودة هي 0 و4. عدد الكريات التي تحمل رقما زوجيا هو 3: الحمراء 0، والخضراء 0 و4.
+وعدد الكريات ذات الأرقام الفردية هو 8.
+
 قيم X هي: 0، 1، 2، 3.
-• P(X=0) = C(8,3)/165 = 56/165
-• P(X=1) = C(3,1)×C(8,2)/165 = 3×28/165 = 84/165
-• P(X=2) = C(3,2)×C(8,1)/165 = 3×8/165 = 24/165
-• P(X=3) = C(3,3)/165 = 1/165
 
-<p class="property-box"><strong>تدقيق:</strong> 56/165+84/165+24/165+1/165=165/165=1 ✓</p>
+P(X=0)=C(8,3)/C(11,3)=56/165
+P(X=1)=C(3,1)C(8,2)/C(11,3)=84/165
+P(X=2)=C(3,2)C(8,1)/C(11,3)=24/165
+P(X=3)=C(3,3)/C(11,3)=1/165
 
-الأمل الرياضي:
-E(X) = 0×(56/165) + 1×(84/165) + 2×(24/165) + 3×(1/165)
-= (0+84+48+3)/165
-= 135/165
-= 9/11
-≈ 0.818
+<p class="property-box"><strong>قانون X:</strong><br>
+P(X=0)=56/165، P(X=1)=84/165، P(X=2)=24/165، P(X=3)=1/165.</p>
 
-<p class="property-box"><strong>النتيجة:</strong> E(X)=9/11 ≈ 0.818.</p>`
+E(X)=0×56/165 + 1×84/165 + 2×24/165 + 3×1/165
+=(84+48+3)/165
+=135/165
+=9/11
+
+<p class="property-box"><strong>النتيجة:</strong> E(X)=9/11.</p>
+
+ب) احتمال الحادثة X>1:
+
+P(X>1)=P(X=2)+P(X=3)
+=24/165+1/165
+=25/165
+=5/33
+
+<p class="property-box"><strong>النتيجة:</strong> P(X>1)=5/33.</p>
+
+II) نسحب 3 كريات على التوالي دون إرجاع.
+الحادثة D: جداء الأرقام معدوم، أي يظهر الرقم 0 مرة واحدة على الأقل.
+في الكيس كريتان تحملان الرقم 0 من أصل 11، إذن عدد الكريات غير الصفرية هو 9.
+
+نحسب بالمتممة:
+
+P(D)=1-P(عدم ظهور أي 0)
+=1-[C(9,3)/C(11,3)]
+=1-84/165
+=81/165
+=27/55
+
+<p class="property-box"><strong>النتيجة:</strong> P(D)=27/55.</p>`
   },
   {
     id: 6,
@@ -5143,6 +5253,950 @@ P(B/S̄)=P(B∩S̄)/P(S̄)
 =15/31
 
 <p class="property-box"><strong>النتيجة:</strong> P(B/S̄)=15/31≈0.484.</p>`
+  },
+  {
+    id: 44,
+    track: "experimental",
+    year: 2025,
+    topic: "الموضوع الأول",
+    text: `التمرين الأول: (04 نقاط)
+
+يحتوي صندوق U1 على 5 كريات منها: كريتان حمراوان وثلاث كريات خضراء، ويحتوي صندوق U2 على 5 كريات منها: ثلاث كريات حمراء وكريتان خضراوان. جميع الكريات متماثلة ولا نفرق بينها باللمس.
+
+نسحب عشوائيا 3 كريات بالكيفية التالية: نسحب كرية واحدة من U1 ونسجل لونها.
+- إذا كانت الكرية المسحوبة حمراء نعيدها إلى U1 ثم نسحب منه عشوائيا كريتين في آن واحد.
+- وإذا كانت الكرية المسحوبة خضراء نضعها في U2 ثم نسحب منه عشوائيا كريتين في آن واحد.
+
+نعتبر الحوادث:
+R: "الحصول على كرية حمراء"
+V: "الحصول على كرية خضراء"
+A: "الحصول على 3 كريات من نفس اللون"
+B: "الحصول على كرية خضراء على الأقل"
+
+1) انقل وأكمل شجرة الاحتمالات المقابلة.
+2) احسب احتمالي الحادثتين A وB.
+3) ليكن X المتغير العشوائي الذي يرفق بكل عملية سحب للثلاث كريات، حسب الكيفية المتبعة، عدد الكريات الحمراء المسحوبة. عين قانون احتمال X ثم احسب أمله الرياضي.`,
+    diagram: `
+      <svg class="bac-tree" viewBox="0 0 650 390" role="img" aria-label="شجرة احتمالات ناقصة لبكالوريا 2025 علوم تجريبية الموضوع الأول">
+        <defs>
+          <marker id="bacTreeArrow2025ExperimentalTopic1" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+            <path d="M0,0 L8,4 L0,8 Z"></path>
+          </marker>
+        </defs>
+        <line x1="45" y1="195" x2="210" y2="105" marker-end="url(#bacTreeArrow2025ExperimentalTopic1)"></line>
+        <line x1="45" y1="195" x2="210" y2="285" marker-end="url(#bacTreeArrow2025ExperimentalTopic1)"></line>
+        <line x1="235" y1="105" x2="455" y2="55" marker-end="url(#bacTreeArrow2025ExperimentalTopic1)"></line>
+        <line x1="235" y1="105" x2="455" y2="105" marker-end="url(#bacTreeArrow2025ExperimentalTopic1)"></line>
+        <line x1="235" y1="105" x2="455" y2="155" marker-end="url(#bacTreeArrow2025ExperimentalTopic1)"></line>
+        <line x1="235" y1="285" x2="455" y2="235" marker-end="url(#bacTreeArrow2025ExperimentalTopic1)"></line>
+        <line x1="235" y1="285" x2="455" y2="285" marker-end="url(#bacTreeArrow2025ExperimentalTopic1)"></line>
+        <line x1="235" y1="285" x2="455" y2="335" marker-end="url(#bacTreeArrow2025ExperimentalTopic1)"></line>
+        <text x="118" y="120">----</text>
+        <text x="118" y="280">----</text>
+        <text x="318" y="58">1/10</text>
+        <text x="318" y="110">----</text>
+        <text x="318" y="160">----</text>
+        <text x="318" y="238">1/5</text>
+        <text x="318" y="290">----</text>
+        <text x="318" y="340">----</text>
+        <text x="223" y="100">R</text>
+        <text x="223" y="300">V</text>
+        <text x="472" y="59">RR</text>
+        <text x="472" y="109">RV</text>
+        <text x="472" y="159">VV</text>
+        <text x="472" y="239">RR</text>
+        <text x="472" y="289">RV</text>
+        <text x="472" y="339">VV</text>
+      </svg>
+    `,
+    solution: `<div class="definition-box"><strong>المعطيات:</strong> في U1: 2 حمراء و3 خضراء. في U2: 3 حمراء و2 خضراء. نسحب أولا من U1: P(R)=2/5 وP(V)=3/5.</div>
+
+1) الشجرة المكتملة:
+
+<svg class="bac-tree" viewBox="0 0 650 390" role="img" aria-label="الشجرة المكتملة لبكالوريا 2025 علوم تجريبية الموضوع الأول">
+  <defs>
+    <marker id="bacTreeArrow2025ExperimentalTopic1Solved" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z"></path>
+    </marker>
+  </defs>
+  <line x1="45" y1="195" x2="210" y2="105" marker-end="url(#bacTreeArrow2025ExperimentalTopic1Solved)"></line>
+  <line x1="45" y1="195" x2="210" y2="285" marker-end="url(#bacTreeArrow2025ExperimentalTopic1Solved)"></line>
+  <line x1="235" y1="105" x2="455" y2="55" marker-end="url(#bacTreeArrow2025ExperimentalTopic1Solved)"></line>
+  <line x1="235" y1="105" x2="455" y2="105" marker-end="url(#bacTreeArrow2025ExperimentalTopic1Solved)"></line>
+  <line x1="235" y1="105" x2="455" y2="155" marker-end="url(#bacTreeArrow2025ExperimentalTopic1Solved)"></line>
+  <line x1="235" y1="285" x2="455" y2="235" marker-end="url(#bacTreeArrow2025ExperimentalTopic1Solved)"></line>
+  <line x1="235" y1="285" x2="455" y2="285" marker-end="url(#bacTreeArrow2025ExperimentalTopic1Solved)"></line>
+  <line x1="235" y1="285" x2="455" y2="335" marker-end="url(#bacTreeArrow2025ExperimentalTopic1Solved)"></line>
+  <text x="118" y="120">2/5</text>
+  <text x="118" y="280">3/5</text>
+  <text x="318" y="58">1/10</text>
+  <text x="318" y="110">3/5</text>
+  <text x="318" y="160">3/10</text>
+  <text x="318" y="238">1/5</text>
+  <text x="318" y="290">3/5</text>
+  <text x="318" y="340">1/5</text>
+  <text x="223" y="100">R</text>
+  <text x="223" y="300">V</text>
+  <text x="472" y="59">RR</text>
+  <text x="472" y="109">RV</text>
+  <text x="472" y="159">VV</text>
+  <text x="472" y="239">RR</text>
+  <text x="472" y="289">RV</text>
+  <text x="472" y="339">VV</text>
+</svg>
+
+إذا كانت الأولى حمراء، نعيدها إلى U1 فيبقى U1: 2R و3V، ومنه:
+P(RR/R)=C(2,2)/C(5,2)=1/10، P(RV/R)=2×3/10=3/5، P(VV/R)=C(3,2)/C(5,2)=3/10.
+
+إذا كانت الأولى خضراء، نضعها في U2 فيصبح U2: 3R و3V، ومنه:
+P(RR/V)=C(3,2)/C(6,2)=1/5، P(RV/V)=3×3/15=3/5، P(VV/V)=C(3,2)/C(6,2)=1/5.
+
+2) احتمال A: الحصول على 3 كريات من نفس اللون:
+
+A يتحقق في المسارين R ثم RR أو V ثم VV.
+P(A)=P(R)P(RR/R)+P(V)P(VV/V)
+=2/5×1/10 + 3/5×1/5
+=1/25+3/25
+=4/25
+
+<p class="property-box"><strong>النتيجة:</strong> P(A)=4/25.</p>
+
+احتمال B: الحصول على كرية خضراء على الأقل.
+نستعمل المتممة: عدم الحصول على أي كرية خضراء يعني الحصول على 3 كريات حمراء، وهو المسار R ثم RR.
+
+P(B)=1-P(R∩RR)
+=1-2/5×1/10
+=1-1/25
+=24/25
+
+<p class="property-box"><strong>النتيجة:</strong> P(B)=24/25.</p>
+
+3) قانون احتمال X، حيث X هو عدد الكريات الحمراء المسحوبة:
+
+• X=3: المسار R ثم RR، احتماله 1/25.
+• X=2: المساران R ثم RV أو V ثم RR، احتماله 2/5×3/5 + 3/5×1/5 = 6/25+3/25=9/25.
+• X=1: المساران R ثم VV أو V ثم RV، احتماله 2/5×3/10 + 3/5×3/5 = 3/25+9/25=12/25.
+• X=0: المسار V ثم VV، احتماله 3/5×1/5=3/25.
+
+<p class="property-box"><strong>قانون X:</strong><br>
+P(X=0)=3/25، P(X=1)=12/25، P(X=2)=9/25، P(X=3)=1/25.</p>
+
+الأمل الرياضي:
+E(X)=0×3/25 + 1×12/25 + 2×9/25 + 3×1/25
+=(12+18+3)/25
+=33/25
+
+<p class="property-box"><strong>النتيجة:</strong> E(X)=33/25.</p>`
+  },
+  {
+    id: 45,
+    track: "experimental",
+    year: 2025,
+    topic: "الموضوع الثاني",
+    text: `التمرين الأول: (04 نقاط)
+
+I) يحتوي صندوق U1 على 6 كريات متماثلة ولا نفرق بينها باللمس، منها: 3 كريات خضراء، كريتان حمراوان وكرية بيضاء واحدة. نسحب عشوائيا من الصندوق U1 كريتين في آن واحد ونعتبر الحادثتين:
+E: "الحصول على كرية حمراء واحدة فقط"
+F: "الحصول على كريتين من نفس اللون"
+
+1) احسب P(E) احتمال الحادثة E.
+2) بين أن احتمال الحادثة F يساوي 4/15 ثم استنتج احتمال الحصول على كريتين من لونين مختلفين.
+
+II) يحتوي صندوق آخر U2 على 6 كريات متماثلة ولا نفرق بينها باللمس، منها: 4 كريات خضراء وكريتان حمراوان. نرمز بـ V وR وB إلى: خضراء، حمراء، بيضاء على الترتيب.
+نسحب عشوائيا من U2 كرية واحدة ونسجل لونها.
+- إذا كانت الكرية المسحوبة خضراء، نسحب كرية أخرى من U2 دون إرجاع الكرية الأولى.
+- وإذا كانت الكرية المسحوبة حمراء، نسحب كرية واحدة من U1.
+
+1) انقل وأكمل شجرة الاحتمالات المقابلة.
+2) أ) ما احتمال الحصول على كرية حمراء في السحب الثاني؟
+   ب) بين أن احتمال الحصول على كرية خضراء في السحب الأول، علما أن الكرية الثانية المسحوبة حمراء، يساوي 12/17.`,
+    diagram: `
+      <svg class="bac-tree" viewBox="0 0 620 340" role="img" aria-label="شجرة احتمالات ناقصة لبكالوريا 2025 علوم تجريبية الموضوع الثاني">
+        <defs>
+          <marker id="bacTreeArrow2025ExperimentalTopic2" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+            <path d="M0,0 L8,4 L0,8 Z"></path>
+          </marker>
+        </defs>
+        <line x1="45" y1="170" x2="215" y2="90" marker-end="url(#bacTreeArrow2025ExperimentalTopic2)"></line>
+        <line x1="45" y1="170" x2="215" y2="250" marker-end="url(#bacTreeArrow2025ExperimentalTopic2)"></line>
+        <line x1="240" y1="90" x2="455" y2="55" marker-end="url(#bacTreeArrow2025ExperimentalTopic2)"></line>
+        <line x1="240" y1="90" x2="455" y2="125" marker-end="url(#bacTreeArrow2025ExperimentalTopic2)"></line>
+        <line x1="240" y1="250" x2="455" y2="205" marker-end="url(#bacTreeArrow2025ExperimentalTopic2)"></line>
+        <line x1="240" y1="250" x2="455" y2="250" marker-end="url(#bacTreeArrow2025ExperimentalTopic2)"></line>
+        <line x1="240" y1="250" x2="455" y2="295" marker-end="url(#bacTreeArrow2025ExperimentalTopic2)"></line>
+        <text x="118" y="105">----</text>
+        <text x="118" y="245">----</text>
+        <text x="320" y="58">----</text>
+        <text x="320" y="130">----</text>
+        <text x="320" y="208">----</text>
+        <text x="320" y="255">----</text>
+        <text x="320" y="300">----</text>
+        <text x="228" y="84">V</text>
+        <text x="228" y="265">R</text>
+        <text x="472" y="59">V</text>
+        <text x="472" y="129">R</text>
+        <text x="472" y="209">V</text>
+        <text x="472" y="254">R</text>
+        <text x="472" y="299">B</text>
+      </svg>
+    `,
+    solution: `<div class="definition-box"><strong>الجزء I:</strong> في U1 توجد 3 خضراء، 2 حمراء، 1 بيضاء. نسحب كريتين في آن واحد؛ عدد الحالات الكلية C(6,2)=15.</div>
+
+I) 1) احتمال الحصول على كرية حمراء واحدة فقط:
+نختار حمراء واحدة من 2، وغير حمراء واحدة من 4.
+
+P(E)=C(2,1)C(4,1)/C(6,2)
+=2×4/15
+=8/15
+
+<p class="property-box"><strong>النتيجة:</strong> P(E)=8/15.</p>
+
+I) 2) احتمال الحصول على كريتين من نفس اللون:
+
+P(F)=[C(3,2)+C(2,2)+C(1,2)]/C(6,2)
+=(3+1+0)/15
+=4/15
+
+<p class="property-box"><strong>تبيان:</strong> P(F)=4/15.</p>
+
+احتمال الحصول على كريتين من لونين مختلفين هو متممة F:
+
+P(F̄)=1-P(F)=1-4/15=11/15
+
+<p class="property-box"><strong>النتيجة:</strong> احتمال لونين مختلفين هو 11/15.</p>
+
+<div class="definition-box"><strong>الجزء II:</strong> في U2 توجد 4 خضراء و2 حمراء. إذا ظهرت خضراء نسحب ثانية من U2 دون إرجاع. إذا ظهرت حمراء نسحب من U1.</div>
+
+II) 1) الشجرة المكتملة:
+
+<svg class="bac-tree" viewBox="0 0 620 340" role="img" aria-label="الشجرة المكتملة لبكالوريا 2025 علوم تجريبية الموضوع الثاني">
+  <defs>
+    <marker id="bacTreeArrow2025ExperimentalTopic2Solved" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z"></path>
+    </marker>
+  </defs>
+  <line x1="45" y1="170" x2="215" y2="90" marker-end="url(#bacTreeArrow2025ExperimentalTopic2Solved)"></line>
+  <line x1="45" y1="170" x2="215" y2="250" marker-end="url(#bacTreeArrow2025ExperimentalTopic2Solved)"></line>
+  <line x1="240" y1="90" x2="455" y2="55" marker-end="url(#bacTreeArrow2025ExperimentalTopic2Solved)"></line>
+  <line x1="240" y1="90" x2="455" y2="125" marker-end="url(#bacTreeArrow2025ExperimentalTopic2Solved)"></line>
+  <line x1="240" y1="250" x2="455" y2="205" marker-end="url(#bacTreeArrow2025ExperimentalTopic2Solved)"></line>
+  <line x1="240" y1="250" x2="455" y2="250" marker-end="url(#bacTreeArrow2025ExperimentalTopic2Solved)"></line>
+  <line x1="240" y1="250" x2="455" y2="295" marker-end="url(#bacTreeArrow2025ExperimentalTopic2Solved)"></line>
+  <text x="118" y="105">2/3</text>
+  <text x="118" y="245">1/3</text>
+  <text x="320" y="58">3/5</text>
+  <text x="320" y="130">2/5</text>
+  <text x="320" y="208">1/2</text>
+  <text x="320" y="255">1/3</text>
+  <text x="320" y="300">1/6</text>
+  <text x="228" y="84">V</text>
+  <text x="228" y="265">R</text>
+  <text x="472" y="59">V</text>
+  <text x="472" y="129">R</text>
+  <text x="472" y="209">V</text>
+  <text x="472" y="254">R</text>
+  <text x="472" y="299">B</text>
+</svg>
+
+2) أ) احتمال الحصول على كرية حمراء في السحب الثاني:
+
+P(R₂)=P(V ثم R)+P(R ثم R)
+=P(V)P(R/V)+P(R)P(R/R)
+=2/3×2/5 + 1/3×1/3
+=4/15+1/9
+=12/45+5/45
+=17/45
+
+<p class="property-box"><strong>النتيجة:</strong> P(R₂)=17/45.</p>
+
+ب) احتمال أن تكون الأولى خضراء علما أن الثانية حمراء:
+
+P(V/R₂)=P(V∩R₂)/P(R₂)
+=(2/3×2/5)/(17/45)
+=(4/15)/(17/45)
+=4/15×45/17
+=12/17
+
+<p class="property-box"><strong>تبيان:</strong> P(V/R₂)=12/17.</p>`
+  },
+  {
+    id: 46,
+    track: "experimental",
+    year: 2024,
+    topic: "الموضوع الثاني",
+    text: `التمرين الأول: (04 نقاط)
+
+يحتوي كيس على 5 قطع كهربائية غير متماثلة ولا نفرق بينها باللمس، منها 3 قطع سليمة وقطعتان غير سليمتين. نرمز إلى القطعة السليمة بالرمز S وإلى القطعة غير السليمة بالرمز S̄.
+
+نسحب عشوائيا من الكيس 3 قطع على التوالي مع الإرجاع، ونعتبر الحوادث:
+A: "القطعة الأولى المسحوبة سليمة"
+B: "سحب قطعة واحدة فقط سليمة"
+C: "القطعة الثالثة المسحوبة سليمة"
+
+1) شكل شجرة الاحتمالات التي تنمذج هذه التجربة.
+2) احسب P(A) وP(B) احتمالي الحادثتين A وB، ثم بين أن P(C)=3/5.
+3) احسب الاحتمال الشرطي P_C(A). هل الحادثتان A وC مستقلتان؟
+4) نرفق بكل قطعة سليمة العدد 10 وبكل قطعة غير سليمة العدد -10، ونعتبر X المتغير العشوائي الذي يرفق بكل عملية سحب من الكيس ثلاث قطع مجموع الأعداد المرفقة بها.
+أ) برر أن قيم المتغير العشوائي X هي: -30، -10، 10، 30.
+ب) عين قانون احتمال المتغير العشوائي X ثم احسب أمله الرياضي E(X).`,
+    diagram: `
+      <svg class="bac-tree" viewBox="0 0 760 460" role="img" aria-label="شجرة احتمالات ناقصة لبكالوريا 2024 علوم تجريبية الموضوع الثاني">
+        <defs>
+          <marker id="bacTreeArrow2024ExperimentalTopic2" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+            <path d="M0,0 L8,4 L0,8 Z"></path>
+          </marker>
+        </defs>
+        <line x1="35" y1="230" x2="165" y2="125" marker-end="url(#bacTreeArrow2024ExperimentalTopic2)"></line>
+        <line x1="35" y1="230" x2="165" y2="335" marker-end="url(#bacTreeArrow2024ExperimentalTopic2)"></line>
+        <line x1="190" y1="125" x2="335" y2="75" marker-end="url(#bacTreeArrow2024ExperimentalTopic2)"></line>
+        <line x1="190" y1="125" x2="335" y2="175" marker-end="url(#bacTreeArrow2024ExperimentalTopic2)"></line>
+        <line x1="190" y1="335" x2="335" y2="285" marker-end="url(#bacTreeArrow2024ExperimentalTopic2)"></line>
+        <line x1="190" y1="335" x2="335" y2="385" marker-end="url(#bacTreeArrow2024ExperimentalTopic2)"></line>
+        <line x1="360" y1="75" x2="520" y2="45" marker-end="url(#bacTreeArrow2024ExperimentalTopic2)"></line>
+        <line x1="360" y1="75" x2="520" y2="105" marker-end="url(#bacTreeArrow2024ExperimentalTopic2)"></line>
+        <line x1="360" y1="175" x2="520" y2="145" marker-end="url(#bacTreeArrow2024ExperimentalTopic2)"></line>
+        <line x1="360" y1="175" x2="520" y2="205" marker-end="url(#bacTreeArrow2024ExperimentalTopic2)"></line>
+        <line x1="360" y1="285" x2="520" y2="255" marker-end="url(#bacTreeArrow2024ExperimentalTopic2)"></line>
+        <line x1="360" y1="285" x2="520" y2="315" marker-end="url(#bacTreeArrow2024ExperimentalTopic2)"></line>
+        <line x1="360" y1="385" x2="520" y2="355" marker-end="url(#bacTreeArrow2024ExperimentalTopic2)"></line>
+        <line x1="360" y1="385" x2="520" y2="415" marker-end="url(#bacTreeArrow2024ExperimentalTopic2)"></line>
+        <text x="92" y="130">----</text><text x="92" y="330">----</text>
+        <text x="250" y="78">----</text><text x="250" y="178">----</text><text x="250" y="288">----</text><text x="250" y="388">----</text>
+        <text x="430" y="48">----</text><text x="430" y="108">----</text><text x="430" y="148">----</text><text x="430" y="208">----</text>
+        <text x="430" y="258">----</text><text x="430" y="318">----</text><text x="430" y="358">----</text><text x="430" y="418">----</text>
+        <text x="178" y="119">S</text><text x="178" y="350">S̄</text>
+        <text x="348" y="69">S</text><text x="348" y="190">S̄</text><text x="348" y="279">S</text><text x="348" y="400">S̄</text>
+        <text x="535" y="49">S</text><text x="535" y="109">S̄</text><text x="535" y="149">S</text><text x="535" y="209">S̄</text>
+        <text x="535" y="259">S</text><text x="535" y="319">S̄</text><text x="535" y="359">S</text><text x="535" y="419">S̄</text>
+      </svg>
+    `,
+    solution: `<div class="definition-box"><strong>المعطيات:</strong> في كل سحب، وبما أن السحب مع الإرجاع: P(S)=3/5 وP(S̄)=2/5.</div>
+
+1) شجرة الاحتمالات:
+
+<svg class="bac-tree" viewBox="0 0 760 460" role="img" aria-label="الشجرة المكتملة لبكالوريا 2024 علوم تجريبية الموضوع الثاني">
+  <defs>
+    <marker id="bacTreeArrow2024ExperimentalTopic2Solved" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z"></path>
+    </marker>
+  </defs>
+  <line x1="35" y1="230" x2="165" y2="125" marker-end="url(#bacTreeArrow2024ExperimentalTopic2Solved)"></line>
+  <line x1="35" y1="230" x2="165" y2="335" marker-end="url(#bacTreeArrow2024ExperimentalTopic2Solved)"></line>
+  <line x1="190" y1="125" x2="335" y2="75" marker-end="url(#bacTreeArrow2024ExperimentalTopic2Solved)"></line>
+  <line x1="190" y1="125" x2="335" y2="175" marker-end="url(#bacTreeArrow2024ExperimentalTopic2Solved)"></line>
+  <line x1="190" y1="335" x2="335" y2="285" marker-end="url(#bacTreeArrow2024ExperimentalTopic2Solved)"></line>
+  <line x1="190" y1="335" x2="335" y2="385" marker-end="url(#bacTreeArrow2024ExperimentalTopic2Solved)"></line>
+  <line x1="360" y1="75" x2="520" y2="45" marker-end="url(#bacTreeArrow2024ExperimentalTopic2Solved)"></line>
+  <line x1="360" y1="75" x2="520" y2="105" marker-end="url(#bacTreeArrow2024ExperimentalTopic2Solved)"></line>
+  <line x1="360" y1="175" x2="520" y2="145" marker-end="url(#bacTreeArrow2024ExperimentalTopic2Solved)"></line>
+  <line x1="360" y1="175" x2="520" y2="205" marker-end="url(#bacTreeArrow2024ExperimentalTopic2Solved)"></line>
+  <line x1="360" y1="285" x2="520" y2="255" marker-end="url(#bacTreeArrow2024ExperimentalTopic2Solved)"></line>
+  <line x1="360" y1="285" x2="520" y2="315" marker-end="url(#bacTreeArrow2024ExperimentalTopic2Solved)"></line>
+  <line x1="360" y1="385" x2="520" y2="355" marker-end="url(#bacTreeArrow2024ExperimentalTopic2Solved)"></line>
+  <line x1="360" y1="385" x2="520" y2="415" marker-end="url(#bacTreeArrow2024ExperimentalTopic2Solved)"></line>
+  <text x="92" y="130">3/5</text><text x="92" y="330">2/5</text>
+  <text x="250" y="78">3/5</text><text x="250" y="178">2/5</text><text x="250" y="288">3/5</text><text x="250" y="388">2/5</text>
+  <text x="430" y="48">3/5</text><text x="430" y="108">2/5</text><text x="430" y="148">3/5</text><text x="430" y="208">2/5</text>
+  <text x="430" y="258">3/5</text><text x="430" y="318">2/5</text><text x="430" y="358">3/5</text><text x="430" y="418">2/5</text>
+  <text x="178" y="119">S</text><text x="178" y="350">S̄</text>
+  <text x="348" y="69">S</text><text x="348" y="190">S̄</text><text x="348" y="279">S</text><text x="348" y="400">S̄</text>
+  <text x="535" y="49">S</text><text x="535" y="109">S̄</text><text x="535" y="149">S</text><text x="535" y="209">S̄</text>
+  <text x="535" y="259">S</text><text x="535" y="319">S̄</text><text x="535" y="359">S</text><text x="535" y="419">S̄</text>
+</svg>
+
+2) حساب الاحتمالات:
+
+P(A)=P(S في السحب الأول)=3/5
+
+B: سحب قطعة واحدة فقط سليمة من 3 سحبات.
+
+P(B)=C(3,1)(3/5)(2/5)²
+=3×3/5×4/25
+=36/125
+
+C: القطعة الثالثة سليمة.
+
+P(C)=3/5
+
+<p class="property-box"><strong>النتائج:</strong> P(A)=3/5، P(B)=36/125، P(C)=3/5.</p>
+
+3) حساب P_C(A):
+
+بما أن السحوبات مع الإرجاع، فالنتائج مستقلة من سحب إلى آخر.
+
+P(A∩C)=P(A)P(C)=3/5×3/5=9/25
+
+P_C(A)=P(A∩C)/P(C)
+=(9/25)/(3/5)
+=3/5
+
+وبما أن P_C(A)=P(A)، فإن الحادثتين A وC مستقلتان.
+
+<p class="property-box"><strong>النتيجة:</strong> P_C(A)=3/5، والحادثتان A وC مستقلتان.</p>
+
+4) المتغير العشوائي X:
+كل قطعة سليمة تقابل 10، وكل قطعة غير سليمة تقابل -10.
+إذا كان عدد القطع السليمة المسحوبة هو k من بين 3، فإن:
+X=10k-10(3-k)=20k-30
+
+لـ k=0،1،2،3 نحصل على القيم:
+-30، -10، 10، 30.
+
+<p class="property-box"><strong>تبرير:</strong> قيم X هي: -30، -10، 10، 30.</p>
+
+قانون احتمال X:
+
+• X=-30 يعني k=0:
+P(X=-30)=(2/5)³=8/125
+
+• X=-10 يعني k=1:
+P(X=-10)=C(3,1)(3/5)(2/5)²=36/125
+
+• X=10 يعني k=2:
+P(X=10)=C(3,2)(3/5)²(2/5)=54/125
+
+• X=30 يعني k=3:
+P(X=30)=(3/5)³=27/125
+
+<p class="property-box"><strong>قانون X:</strong><br>
+P(X=-30)=8/125، P(X=-10)=36/125، P(X=10)=54/125، P(X=30)=27/125.</p>
+
+E(X)=(-30)×8/125 + (-10)×36/125 + 10×54/125 + 30×27/125
+=(-240-360+540+810)/125
+=750/125
+=6
+
+<p class="property-box"><strong>النتيجة:</strong> E(X)=6.</p>`
+  },
+  {
+    id: 47,
+    track: "experimental",
+    year: 2023,
+    topic: "الموضوع الأول",
+    text: `التمرين الأول: (04 نقاط)
+
+يحتوي صندوق U1 على 5 كرات تحمل الأرقام 1، 1، 1، 2، 3، ويحتوي صندوق U2 على 4 كرات تحمل الأرقام 1، 1، 2، 2. كل الكرات متماثلة ولا نفرق بينها عند اللمس.
+
+نختار عشوائيا أحد الصندوقين ونسحب منه عشوائيا كرتين في آن واحد.
+
+1) نعتبر الحوادث:
+A: "سحب كرتين تحملان رقمين فرديين"
+B: "سحب كرتين تحملان رقمين زوجيين"
+C: "سحب كرتين إحداهما تحمل رقما فرديا والأخرى تحمل رقما زوجيا"
+
+أ) أنجز الشجرة التي تنمذج هذه التجربة.
+ب) بين أن P(A)=23/60 و P(B)=1/12 ثم احسب P(C).
+
+2) نفرغ محتوى الصندوقين U1 وU2 في صندوق جديد U3 ثم نسحب منه عشوائيا كرتين في آن واحد.
+X المتغير العشوائي الذي يرفق بكل عملية سحب لكرتين جداء الرقمين المسجلين عليهما.
+أ) برر أن مجموعة قيم X هي {1،2،3،4،6}.
+ب) عين قانون الاحتمال للمتغير العشوائي X ثم احسب أمله الرياضي E(X).`,
+    diagram: `
+      <svg class="bac-tree" viewBox="0 0 650 330" role="img" aria-label="شجرة احتمالات ناقصة لبكالوريا 2023 علوم تجريبية الموضوع الأول">
+        <defs>
+          <marker id="bacTreeArrow2023ExperimentalTopic1" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+            <path d="M0,0 L8,4 L0,8 Z"></path>
+          </marker>
+        </defs>
+        <line x1="45" y1="165" x2="215" y2="90" marker-end="url(#bacTreeArrow2023ExperimentalTopic1)"></line>
+        <line x1="45" y1="165" x2="215" y2="240" marker-end="url(#bacTreeArrow2023ExperimentalTopic1)"></line>
+        <line x1="240" y1="90" x2="445" y2="55" marker-end="url(#bacTreeArrow2023ExperimentalTopic1)"></line>
+        <line x1="240" y1="90" x2="445" y2="90" marker-end="url(#bacTreeArrow2023ExperimentalTopic1)"></line>
+        <line x1="240" y1="90" x2="445" y2="125" marker-end="url(#bacTreeArrow2023ExperimentalTopic1)"></line>
+        <line x1="240" y1="240" x2="445" y2="205" marker-end="url(#bacTreeArrow2023ExperimentalTopic1)"></line>
+        <line x1="240" y1="240" x2="445" y2="240" marker-end="url(#bacTreeArrow2023ExperimentalTopic1)"></line>
+        <line x1="240" y1="240" x2="445" y2="275" marker-end="url(#bacTreeArrow2023ExperimentalTopic1)"></line>
+        <text x="118" y="103">1/2</text><text x="118" y="235">1/2</text>
+        <text x="320" y="58">----</text><text x="320" y="94">----</text><text x="320" y="130">----</text>
+        <text x="320" y="208">----</text><text x="320" y="244">----</text><text x="320" y="280">----</text>
+        <text x="228" y="84">U1</text><text x="228" y="255">U2</text>
+        <text x="462" y="59">A</text><text x="462" y="94">B</text><text x="462" y="129">C</text>
+        <text x="462" y="209">A</text><text x="462" y="244">B</text><text x="462" y="279">C</text>
+      </svg>
+    `,
+    solution: `<div class="definition-box"><strong>المعطيات:</strong> U1 يحتوي 4 كرات فردية الأرقام وكرية واحدة زوجية. U2 يحتوي كرتين فرديتين وكرتين زوجيتين. نختار أحد الصندوقين باحتمال 1/2.</div>
+
+1) أ) الشجرة المكتملة:
+
+<svg class="bac-tree" viewBox="0 0 650 330" role="img" aria-label="الشجرة المكتملة لبكالوريا 2023 علوم تجريبية الموضوع الأول">
+  <defs>
+    <marker id="bacTreeArrow2023ExperimentalTopic1Solved" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z"></path>
+    </marker>
+  </defs>
+  <line x1="45" y1="165" x2="215" y2="90" marker-end="url(#bacTreeArrow2023ExperimentalTopic1Solved)"></line>
+  <line x1="45" y1="165" x2="215" y2="240" marker-end="url(#bacTreeArrow2023ExperimentalTopic1Solved)"></line>
+  <line x1="240" y1="90" x2="445" y2="55" marker-end="url(#bacTreeArrow2023ExperimentalTopic1Solved)"></line>
+  <line x1="240" y1="90" x2="445" y2="90" marker-end="url(#bacTreeArrow2023ExperimentalTopic1Solved)"></line>
+  <line x1="240" y1="90" x2="445" y2="125" marker-end="url(#bacTreeArrow2023ExperimentalTopic1Solved)"></line>
+  <line x1="240" y1="240" x2="445" y2="205" marker-end="url(#bacTreeArrow2023ExperimentalTopic1Solved)"></line>
+  <line x1="240" y1="240" x2="445" y2="240" marker-end="url(#bacTreeArrow2023ExperimentalTopic1Solved)"></line>
+  <line x1="240" y1="240" x2="445" y2="275" marker-end="url(#bacTreeArrow2023ExperimentalTopic1Solved)"></line>
+  <text x="118" y="103">1/2</text><text x="118" y="235">1/2</text>
+  <text x="320" y="58">3/5</text><text x="320" y="94">0</text><text x="320" y="130">2/5</text>
+  <text x="320" y="208">1/6</text><text x="320" y="244">1/6</text><text x="320" y="280">2/3</text>
+  <text x="228" y="84">U1</text><text x="228" y="255">U2</text>
+  <text x="462" y="59">A</text><text x="462" y="94">B</text><text x="462" y="129">C</text>
+  <text x="462" y="209">A</text><text x="462" y="244">B</text><text x="462" y="279">C</text>
+</svg>
+
+في U1: C(5,2)=10.
+P(A/U1)=C(4,2)/10=6/10=3/5
+P(B/U1)=0 لأن في U1 كرة زوجية واحدة فقط.
+P(C/U1)=C(4,1)C(1,1)/10=4/10=2/5
+
+في U2: C(4,2)=6.
+P(A/U2)=C(2,2)/6=1/6
+P(B/U2)=C(2,2)/6=1/6
+P(C/U2)=C(2,1)C(2,1)/6=4/6=2/3
+
+ب) حساب P(A) وP(B) وP(C):
+
+P(A)=1/2×3/5 + 1/2×1/6
+=3/10+1/12
+=18/60+5/60
+=23/60
+
+P(B)=1/2×0 + 1/2×1/6
+=1/12
+
+<p class="property-box"><strong>تبيان:</strong> P(A)=23/60 و P(B)=1/12.</p>
+
+P(C)=1-P(A)-P(B)
+=1-23/60-1/12
+=60/60-23/60-5/60
+=32/60=8/15
+
+<p class="property-box"><strong>النتيجة:</strong> P(C)=8/15.</p>
+
+2) في الصندوق U3 بعد الدمج توجد 9 كرات أرقامها:
+1،1،1،1،1، 2،2،2، 3.
+أي: خمس كرات تحمل 1، ثلاث كرات تحمل 2، وكرية واحدة تحمل 3.
+نسحب كرتين في آن واحد، وعدد الحالات الكلية C(9,2)=36.
+
+أ) الجداءات الممكنة هي:
+1×1=1، 1×2=2، 1×3=3، 2×2=4، 2×3=6.
+إذن مجموعة قيم X هي {1،2،3،4،6}.
+
+ب) قانون احتمال X:
+
+P(X=1)=C(5,2)/36=10/36=5/18
+P(X=2)=C(5,1)C(3,1)/36=15/36=5/12
+P(X=3)=C(5,1)C(1,1)/36=5/36
+P(X=4)=C(3,2)/36=3/36=1/12
+P(X=6)=C(3,1)C(1,1)/36=3/36=1/12
+
+<p class="property-box"><strong>قانون X:</strong><br>
+P(X=1)=5/18، P(X=2)=5/12، P(X=3)=5/36، P(X=4)=1/12، P(X=6)=1/12.</p>
+
+E(X)=1×5/18 + 2×5/12 + 3×5/36 + 4×1/12 + 6×1/12
+=10/36+30/36+15/36+12/36+18/36
+=85/36
+
+<p class="property-box"><strong>النتيجة:</strong> E(X)=85/36.</p>`
+  },
+  {
+    id: 48,
+    track: "experimental",
+    year: 2023,
+    topic: "الموضوع الثاني",
+    text: `التمرين الأول: (04 نقاط)
+
+يحتوي كيس على 10 كريات متماثلة ولا نفرق بينها باللمس، موزعة كما يلي:
+3 كريات بيضاء مرقمة بـ: 1، 1، 2.
+3 كريات حمراء مرقمة بـ: 1، 2، 2.
+4 كريات خضراء مرقمة بـ: 1، 2، 2، 2.
+
+نسحب عشوائيا وفي آن واحد كريتين من الكيس ونعتبر الحوادث A وB وC الآتية:
+A: "الحصول على كريتين من نفس اللون"
+B: "الحصول على كرية خضراء على الأقل"
+C: "الحصول على كريتين تحملان رقمين زوجيين"
+
+1) أ) بين أن احتمال الحدث A يساوي 4/15 وأن احتمال الحدث B يساوي 2/3.
+ب) احسب الاحتمالين P(C) وP(A∩C). هل الحادثتان A وC مستقلتان؟
+ج) استنتج احتمال الحصول على كريتين من نفس اللون علما أنهما تحملان رقمين زوجيين.
+
+2) نعتبر المتغير العشوائي X الذي يرفق بكل عملية سحب لكريتين مجموع الرقمين المسجلين عليهما.
+أ) برر أن مجموعة قيم المتغير العشوائي X هي {2،3،4}.
+ب) عين قانون احتمال المتغير العشوائي X ثم احسب أمله الرياضي E(X).`,
+    solution: `<div class="definition-box"><strong>المعطيات:</strong> عدد الكريات الكلي 10. البيضاء 3، الحمراء 3، الخضراء 4. عدد الكريات التي تحمل الرقم 1 هو 4، وعدد الكريات التي تحمل الرقم 2 هو 6. نسحب كريتين في آن واحد؛ عدد الحالات الكلية C(10,2)=45.</div>
+
+1) أ) حساب P(A):
+
+A: الحصول على كريتين من نفس اللون.
+
+P(A)=[C(3,2)+C(3,2)+C(4,2)]/C(10,2)
+=(3+3+6)/45
+=12/45
+=4/15
+
+<p class="property-box"><strong>تبيان:</strong> P(A)=4/15.</p>
+
+حساب P(B):
+B: الحصول على كرية خضراء على الأقل.
+نستعمل المتممة: لا نحصل على أي كرية خضراء، أي نسحب كريتين من غير الخضراء وعددها 6.
+
+P(B)=1-C(6,2)/C(10,2)
+=1-15/45
+=30/45
+=2/3
+
+<p class="property-box"><strong>تبيان:</strong> P(B)=2/3.</p>
+
+ب) حساب P(C):
+C: الحصول على كريتين تحملان رقمين زوجيين، أي الرقم 2 والرقم 2.
+عدد الكريات التي تحمل الرقم 2 هو 6.
+
+P(C)=C(6,2)/C(10,2)
+=15/45
+=1/3
+
+حساب P(A∩C):
+نريد كريتين من نفس اللون وتحملان الرقم 2.
+• البيضاء: توجد كرية واحدة تحمل 2، لا تكفي.
+• الحمراء: توجد كريتان تحملان 2، حالة واحدة.
+• الخضراء: توجد ثلاث كريات تحمل 2، عدد الحالات C(3,2)=3.
+
+عدد الحالات الملائمة = 1+3=4.
+
+P(A∩C)=4/45
+
+دراسة الاستقلال:
+P(A)P(C)=4/15×1/3=4/45
+وهذا يساوي P(A∩C).
+
+<p class="property-box"><strong>النتيجة:</strong> P(C)=1/3، P(A∩C)=4/45، والحادثتان A وC مستقلتان.</p>
+
+ج) احتمال الحصول على كريتين من نفس اللون علما أنهما تحملان رقمين زوجيين:
+
+P_C(A)=P(A∩C)/P(C)
+=(4/45)/(1/3)
+=4/15
+
+<p class="property-box"><strong>النتيجة:</strong> P_C(A)=4/15.</p>
+
+2) المتغير العشوائي X:
+الأرقام الممكنة على الكريات هي 1 و2 فقط. عند سحب كريتين، مجموع الرقمين يمكن أن يكون:
+1+1=2، أو 1+2=3، أو 2+2=4.
+إذن مجموعة قيم X هي {2،3،4}.
+
+قانون احتمال X:
+
+P(X=2)=C(4,2)/C(10,2)=6/45=2/15
+
+P(X=3)=C(4,1)C(6,1)/C(10,2)=24/45=8/15
+
+P(X=4)=C(6,2)/C(10,2)=15/45=1/3
+
+<p class="property-box"><strong>قانون X:</strong><br>
+P(X=2)=2/15، P(X=3)=8/15، P(X=4)=1/3.</p>
+
+E(X)=2×2/15 + 3×8/15 + 4×1/3
+=4/15+24/15+20/15
+=48/15
+=16/5
+
+<p class="property-box"><strong>النتيجة:</strong> E(X)=16/5.</p>`
+  },
+  {
+    id: 49,
+    track: "experimental",
+    year: 2021,
+    topic: "الموضوع الثاني",
+    text: `التمرين الأول: (04 نقاط)
+
+صندوق به 9 بطاقات متماثلة لا نفرق بينها باللمس، مكتوب على كل منها سؤال واحد:
+منها ثلاثة أسئلة في الهندسة مرقمة بـ: 1، 2، 3، وأربعة أسئلة في الجبر مرقمة بـ: 1، 2، 3، 4، وسؤالان في التحليل مرقمان بـ: 1، 2.
+
+نسحب عشوائيا بطاقة واحدة من الصندوق ونعتبر الحوادث التالية:
+A: "سحب سؤال في الهندسة"
+B: "سحب سؤال في التحليل"
+C: "سحب سؤال في الجبر يحمل رقما زوجيا"
+
+1) احسب P(A)، P(B)، P(C) احتمالات الحوادث A وB وC على الترتيب.
+2) احسب احتمال سحب سؤال رقمه مختلف عن 1.
+3) المتغير العشوائي X يرفق بكل بطاقة مسحوبة رقم السؤال المسجل عليها.
+أ) برر أن مجموعة قيم X هي {1،2،3،4}.
+ب) عين قانون الاحتمال للمتغير العشوائي X ثم احسب أمله الرياضي E(X).
+ج) استنتج قيمة E(2021X+1442).`,
+    solution: `<div class="definition-box"><strong>المعطيات:</strong> عدد البطاقات الكلي 9. الهندسة: 3 بطاقات أرقامها 1،2،3. الجبر: 4 بطاقات أرقامها 1،2،3،4. التحليل: بطاقتان رقماهما 1،2.</div>
+
+1) حساب الاحتمالات:
+
+A: سحب سؤال في الهندسة.
+P(A)=3/9=1/3
+
+B: سحب سؤال في التحليل.
+P(B)=2/9
+
+C: سحب سؤال في الجبر يحمل رقما زوجيا.
+في الجبر الأرقام الزوجية هي 2 و4، إذن حالتان من أصل 9.
+P(C)=2/9
+
+<p class="property-box"><strong>النتائج:</strong> P(A)=1/3، P(B)=2/9، P(C)=2/9.</p>
+
+2) احتمال سحب سؤال رقمه مختلف عن 1:
+عدد البطاقات التي تحمل الرقم 1 هو 3: واحدة في الهندسة، واحدة في الجبر، واحدة في التحليل.
+إذن عدد البطاقات التي رقمها مختلف عن 1 هو 9-3=6.
+
+P=6/9=2/3
+
+<p class="property-box"><strong>النتيجة:</strong> الاحتمال هو 2/3.</p>
+
+3) المتغير العشوائي X:
+أ) الأرقام الموجودة على البطاقات هي 1،2،3،4، إذن مجموعة قيم X هي:
+X(Ω)={1،2،3،4}
+
+ب) قانون احتمال X:
+
+• الرقم 1 موجود في الهندسة والجبر والتحليل: 3 بطاقات.
+P(X=1)=3/9=1/3
+
+• الرقم 2 موجود في الهندسة والجبر والتحليل: 3 بطاقات.
+P(X=2)=3/9=1/3
+
+• الرقم 3 موجود في الهندسة والجبر فقط: بطاقتان.
+P(X=3)=2/9
+
+• الرقم 4 موجود في الجبر فقط: بطاقة واحدة.
+P(X=4)=1/9
+
+<p class="property-box"><strong>قانون X:</strong><br>
+P(X=1)=1/3، P(X=2)=1/3، P(X=3)=2/9، P(X=4)=1/9.</p>
+
+E(X)=1×1/3 + 2×1/3 + 3×2/9 + 4×1/9
+=3/9+6/9+6/9+4/9
+=19/9
+
+<p class="property-box"><strong>النتيجة:</strong> E(X)=19/9.</p>
+
+ج) باستعمال خطية الأمل الرياضي:
+
+E(2021X+1442)=2021E(X)+1442
+=2021×19/9+1442
+=38399/9+12978/9
+=51377/9
+
+<p class="property-box"><strong>النتيجة:</strong> E(2021X+1442)=51377/9.</p>`
+  },
+  {
+    id: 50,
+    track: "experimental",
+    year: 2020,
+    topic: "الموضوع الأول",
+    text: `التمرين الأول: (04 نقاط)
+
+يحتوي وعاء U على 4 كرات حمراء و6 سوداء، ويحتوي وعاء V على 5 كرات حمراء و3 سوداء. كل الكرات متماثلة ولا نفرق بينها عند اللمس.
+
+نسحب عشوائيا كرتين في آن واحد من أحد الوعاءين بالكيفية التالية:
+نقوم بسحب بطاقة واحدة عشوائيا من كيس يحتوي على 6 بطاقات متماثلة ومرقمة من 1 إلى 6؛ إذا تحصلنا على أحد الرقمين 3 أو 5 نسحب الكرتين من U، وفي باقي الحالات نسحب الكرتين من V.
+
+نسمي الحدث:
+A: "الحصول على أحد الرقمين 3 و5"
+M: "الحصول على كرتين من نفس اللون"
+
+1) تحقق أن P(Ā)، احتمال السحب من الوعاء V، هو 2/3.
+2) علما أن الكرتين المسحوبتين من U، بين أن احتمال أن تكونا من نفس اللون هو 7/15.
+3) انقل شجرة الاحتمالات المقابلة ثم أكملها واستنتج P(M).
+4) احسب P_M̄(A) احتمال السحب من الوعاء U علما أن الكرتين المسحوبتين مختلفتا اللون.`,
+    diagram: `
+      <svg class="bac-tree" viewBox="0 0 620 330" role="img" aria-label="شجرة احتمالات ناقصة لبكالوريا 2020 علوم تجريبية الموضوع الأول">
+        <defs>
+          <marker id="bacTreeArrow2020ExperimentalTopic1" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+            <path d="M0,0 L8,4 L0,8 Z"></path>
+          </marker>
+        </defs>
+        <line x1="45" y1="165" x2="215" y2="90" marker-end="url(#bacTreeArrow2020ExperimentalTopic1)"></line>
+        <line x1="45" y1="165" x2="215" y2="240" marker-end="url(#bacTreeArrow2020ExperimentalTopic1)"></line>
+        <line x1="240" y1="90" x2="445" y2="55" marker-end="url(#bacTreeArrow2020ExperimentalTopic1)"></line>
+        <line x1="240" y1="90" x2="445" y2="125" marker-end="url(#bacTreeArrow2020ExperimentalTopic1)"></line>
+        <line x1="240" y1="240" x2="445" y2="205" marker-end="url(#bacTreeArrow2020ExperimentalTopic1)"></line>
+        <line x1="240" y1="240" x2="445" y2="275" marker-end="url(#bacTreeArrow2020ExperimentalTopic1)"></line>
+        <text x="118" y="103">----</text>
+        <text x="118" y="235">----</text>
+        <text x="320" y="58">----</text>
+        <text x="320" y="130">----</text>
+        <text x="320" y="208">13/28</text>
+        <text x="320" y="280">----</text>
+        <text x="228" y="84">A</text>
+        <text x="228" y="255">Ā</text>
+        <text x="462" y="59">M</text>
+        <text x="462" y="129">M̄</text>
+        <text x="462" y="209">M</text>
+        <text x="462" y="279">M̄</text>
+      </svg>
+    `,
+    solution: `<div class="definition-box"><strong>المعطيات:</strong> A يعني ظهور 3 أو 5، وبالتالي السحب من U. أما Ā فيعني السحب من V.</div>
+
+1) احتمال السحب من V:
+
+P(A)=2/6=1/3
+إذن:
+P(Ā)=1-P(A)=2/3
+
+<p class="property-box"><strong>تأكيد:</strong> P(Ā)=2/3.</p>
+
+2) علما أن السحب من U:
+في U توجد 4 حمراء و6 سوداء، وعدد الحالات الكلية C(10,2)=45.
+
+احتمال كرتين من نفس اللون:
+P(M/A)=[C(4,2)+C(6,2)]/C(10,2)
+=(6+15)/45
+=21/45
+=7/15
+
+<p class="property-box"><strong>تبيان:</strong> P(M/A)=7/15.</p>
+
+3) الشجرة المكتملة:
+
+<svg class="bac-tree" viewBox="0 0 620 330" role="img" aria-label="الشجرة المكتملة لبكالوريا 2020 علوم تجريبية الموضوع الأول">
+  <defs>
+    <marker id="bacTreeArrow2020ExperimentalTopic1Solved" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z"></path>
+    </marker>
+  </defs>
+  <line x1="45" y1="165" x2="215" y2="90" marker-end="url(#bacTreeArrow2020ExperimentalTopic1Solved)"></line>
+  <line x1="45" y1="165" x2="215" y2="240" marker-end="url(#bacTreeArrow2020ExperimentalTopic1Solved)"></line>
+  <line x1="240" y1="90" x2="445" y2="55" marker-end="url(#bacTreeArrow2020ExperimentalTopic1Solved)"></line>
+  <line x1="240" y1="90" x2="445" y2="125" marker-end="url(#bacTreeArrow2020ExperimentalTopic1Solved)"></line>
+  <line x1="240" y1="240" x2="445" y2="205" marker-end="url(#bacTreeArrow2020ExperimentalTopic1Solved)"></line>
+  <line x1="240" y1="240" x2="445" y2="275" marker-end="url(#bacTreeArrow2020ExperimentalTopic1Solved)"></line>
+  <text x="118" y="103">1/3</text>
+  <text x="118" y="235">2/3</text>
+  <text x="320" y="58">7/15</text>
+  <text x="320" y="130">8/15</text>
+  <text x="320" y="208">13/28</text>
+  <text x="320" y="280">15/28</text>
+  <text x="228" y="84">A</text>
+  <text x="228" y="255">Ā</text>
+  <text x="462" y="59">M</text>
+  <text x="462" y="129">M̄</text>
+  <text x="462" y="209">M</text>
+  <text x="462" y="279">M̄</text>
+</svg>
+
+في V توجد 5 حمراء و3 سوداء، وعدد الحالات الكلية C(8,2)=28.
+
+P(M/Ā)=[C(5,2)+C(3,2)]/C(8,2)
+=(10+3)/28
+=13/28
+
+إذن:
+P(M)=P(A)P(M/A)+P(Ā)P(M/Ā)
+=1/3×7/15 + 2/3×13/28
+=7/45+26/84
+=98/630+195/630
+=293/630
+
+<p class="property-box"><strong>النتيجة:</strong> P(M)=293/630.</p>
+
+4) احتمال السحب من U علما أن الكرتين مختلفتا اللون:
+
+P(A/M̄)=P(A∩M̄)/P(M̄)
+
+P(A∩M̄)=P(A)P(M̄/A)
+=1/3×8/15
+=8/45
+
+P(M̄)=1-P(M)=1-293/630=337/630
+
+إذن:
+P(A/M̄)=(8/45)/(337/630)
+=8/45×630/337
+=112/337
+
+<p class="property-box"><strong>النتيجة:</strong> P_M̄(A)=112/337.</p>`
+  },
+  {
+    id: 51,
+    track: "experimental",
+    year: 2019,
+    topic: "الموضوع الثاني",
+    text: `التمرين الأول: (04 نقاط)
+
+يحتوي صندوق على 10 كريات لا نفرق بينها عند اللمس، منها كريتان تحملان الرقم 0، وثلاث تحمل الرقم 1، والكريات الأخرى تحمل الرقم 2. نسحب عشوائيا وفي آن واحد ثلاث كريات من الصندوق.
+
+ليكن X المتغير العشوائي الذي يرفق بكل سحب جداء الأرقام المسجلة على الكريات المسحوبة.
+
+1) عرف قانون الاحتمال للمتغير العشوائي X ثم احسب أمله الرياضي E(X).
+2) بين أن احتمال الحصول على ثلاث كريات كل منها تحمل رقما زوجيا هو 7/24.
+3) نسحب الآن من الصندوق كريتين على التوالي دون إرجاع. ما احتمال الحصول على كريتين تحملان رقمين مجموعهما فردي علما أن جداءهما زوجي؟`,
+    solution: `<div class="definition-box"><strong>المعطيات:</strong> في الصندوق 10 كريات: كريتان تحملان 0، ثلاث كريات تحمل 1، وخمس كريات تحمل 2. في السحب الأول نسحب 3 كريات في آن واحد؛ عدد الحالات الكلية C(10,3)=120.</div>
+
+1) قانون احتمال X:
+X هو جداء الأرقام المسجلة على الكريات الثلاث.
+
+القيم الممكنة لـ X هي: 0، 1، 2، 4، 8.
+
+• X=0: يتحقق إذا ظهرت على الأقل كرية تحمل 0.
+نستعمل المتممة: لا تظهر أي 0، أي نختار 3 كريات من الكريات الثماني التي تحمل 1 أو 2.
+P(X=0)=1-C(8,3)/C(10,3)
+=1-56/120
+=64/120=8/15
+
+• X=1: نختار 3 كريات تحمل الرقم 1.
+P(X=1)=C(3,3)/120=1/120
+
+• X=2: نختار كريتين تحملان 1 وكرية واحدة تحمل 2.
+P(X=2)=C(3,2)C(5,1)/120
+=15/120=1/8
+
+• X=4: نختار كرية واحدة تحمل 1 وكريتين تحملان 2.
+P(X=4)=C(3,1)C(5,2)/120
+=30/120=1/4
+
+• X=8: نختار 3 كريات تحمل الرقم 2.
+P(X=8)=C(5,3)/120
+=10/120=1/12
+
+<p class="property-box"><strong>قانون X:</strong><br>
+P(X=0)=8/15، P(X=1)=1/120، P(X=2)=1/8، P(X=4)=1/4، P(X=8)=1/12.</p>
+
+E(X)=0×8/15 + 1×1/120 + 2×1/8 + 4×1/4 + 8×1/12
+=1/120+1/4+1+2/3
+=1/120+30/120+120/120+80/120
+=231/120=77/40
+
+<p class="property-box"><strong>النتيجة:</strong> E(X)=77/40.</p>
+
+2) احتمال الحصول على ثلاث كريات كل منها تحمل رقما زوجيا:
+الأرقام الزوجية هنا هي 0 و2. عدد الكريات التي تحمل رقما زوجيا هو 2+5=7.
+
+P=C(7,3)/C(10,3)
+=35/120
+=7/24
+
+<p class="property-box"><strong>تبيان:</strong> الاحتمال يساوي 7/24.</p>
+
+3) نسحب كريتين على التوالي دون إرجاع:
+نريد احتمال أن يكون مجموع الرقمين فرديا علما أن جداءهما زوجي.
+
+ليكن:
+A: "مجموع الرقمين فردي"
+B: "جداء الرقمين زوجي"
+
+مجموع الرقمين يكون فرديا إذا كان أحدهما فرديا والآخر زوجيا؛ أي واحدة تحمل 1 وواحدة تحمل 0 أو 2.
+وبما أن وجود رقم زوجي مع 1 يجعل الجداء زوجيا فقط إذا كان الرقم الزوجي 0 أو 2، وهذا صحيح.
+إذن A⊂B، ومنه:
+P(A/B)=P(A)/P(B)
+
+نحسب بالاختيارات غير المرتبة:
+عدد الحالات الكلية لسحب كريتين هو C(10,2)=45.
+
+A: نختار كرية تحمل 1 من 3، وكرية تحمل رقما زوجيا من 7:
+عدد الحالات = 3×7=21
+P(A)=21/45
+
+B: الجداء زوجي يعني ألا يكون الرقمان فرديين معا.
+متممة B هي سحب كريتين تحملان 1.
+P(B)=1-C(3,2)/C(10,2)
+=1-3/45
+=42/45
+
+إذن:
+P(A/B)=(21/45)/(42/45)=1/2
+
+<p class="property-box"><strong>النتيجة:</strong> الاحتمال الشرطي يساوي 1/2.</p>`
   }
 ];
 
@@ -5193,6 +6247,7 @@ function setBranch(branch) {
   state.branch = branch;
   document.querySelectorAll("[data-branch]").forEach((btn) => btn.classList.toggle("active", btn.dataset.branch === branch));
   if (!activeModules().some((module) => module.id === state.moduleId)) state.moduleId = activeModules()[0].id;
+  state.bacYearFilter = "الكل";
   renderAll();
 }
 
@@ -6344,26 +7399,47 @@ function renderPractice() {
 }
 
 function renderBac() {
+  const allowedTracks = Object.keys(bacTrackLabels).filter((track) => track !== "all");
+  if (state.bacTrackFilter !== "all" && !allowedTracks.includes(state.bacTrackFilter)) {
+    state.bacTrackFilter = "all";
+  }
+  const branchExercises = bacExercises.filter((ex) => allowedTracks.includes(ex.track));
   const trackFiltered = state.bacTrackFilter === "all"
-    ? bacExercises
-    : bacExercises.filter((ex) => ex.track === state.bacTrackFilter);
+    ? branchExercises
+    : branchExercises.filter((ex) => ex.track === state.bacTrackFilter);
+  const visibleTrackLabels = [
+    ["all", "كل الشعب"],
+    ...allowedTracks.map((track) => [track, bacTrackLabels[track]]),
+  ];
+  const bacIntroTitle = "بكالوريا جزائرية";
+  const bacIntroText = "مواضيع وتمارين حسب الشعب";
   const years = ["الكل", ...new Set(trackFiltered.map((ex) => ex.year))].sort((a, b) => {
     if (a === "الكل") return -1;
     if (b === "الكل") return 1;
-    return a - b;
+    return b - a;
   });
   const filtered = state.bacYearFilter === "الكل"
     ? trackFiltered
     : trackFiltered.filter((ex) => ex.year.toString() === state.bacYearFilter.toString());
+  const topicOrder = { "الموضوع الأول": 1, "الموضوع الثاني": 2 };
+  const sortedFiltered = [...filtered].sort((a, b) => {
+    if (b.year !== a.year) return b.year - a.year;
+    return (topicOrder[a.topic] || 99) - (topicOrder[b.topic] || 99);
+  });
 
   document.getElementById("bacGrid").innerHTML = `
+    <section class="bac-branch-panel ${state.branch === "literary" ? "literary" : "science"}">
+      <span class="kicker">${branchLabels[state.branch]}</span>
+      <h3>${bacIntroTitle}</h3>
+      <p>${bacIntroText}</p>
+    </section>
     <div class="bac-filter-bar">
       <div class="bac-filter-label">
         <span class="filter-icon">☰</span>
         <span>تصفية حسب الشعبة:</span>
       </div>
       <div class="bac-filter-buttons">
-        ${Object.entries(bacTrackLabels).map(([track, label]) => `
+        ${visibleTrackLabels.map(([track, label]) => `
           <button
             class="bac-filter-btn ${state.bacTrackFilter === track ? "active" : ""}"
             type="button"
@@ -6388,7 +7464,7 @@ function renderBac() {
       </div>
     </div>
     <div class="bac-exercises-list">
-      ${filtered.length > 0 ? filtered.map((exercise) => {
+      ${sortedFiltered.length > 0 ? sortedFiltered.map((exercise) => {
         const isOpen = state.bacOpenSolutions[exercise.id];
         return `
           <article class="bac-exercise-card">
